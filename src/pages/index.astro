@@ -1,17 +1,349 @@
 ---
+// === ВРЕМЯ СБОРКИ (SERVER-SIDE / BUILD TIME) ===
+// Этот код выполнится ОДИН РАЗ на этапе сборки сайта.
+// В браузер пользователю он не улетит.
 
+import localMovies from "../data/movies.json";
+
+// Вытаскиваем все уникальные жанры из нашей локальной базы, чтобы заполнить <select>
+// Используем flatMap, так как у каждого фильма массив жанров, и Set, чтобы убрать дубли
+const allGenres = [...new Set(localMovies.flatMap((m) => m.genres?.map((g) => g.name) || []))].sort();
+
+// Генерируем список годов (от старых к новым), которые есть в нашей базе
+const allYears = [...new Set(localMovies.map((m) => m.year))].sort((a, b) => b - a);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chto-glyanut | Что посмотреть вечером</title>
+  </head>
+  <body>
+    <div class="app-container">
+      <header>
+        <h1>🎬 Chto-glyanut</h1>
+        <p class="subtitle">Подбор фильма под интересы или рандом</p>
+      </header>
+
+      <section class="filters-section">
+        <div class="filter-group">
+          <label for="genreSelect">Жанр</label>
+          <select id="genreSelect">
+            <option value="">Любой жанр</option>
+            {allGenres.map((genre) => <option value={genre}>{genre}</option>)}
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="yearSelect">Год</label>
+          <select id="yearSelect">
+            <option value="">Любой год</option>
+            {allYears.map((year) => <option value={year}>{year}</option>)}
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="ratingSelect">Минимальный рейтинг</label>
+          <select id="ratingSelect">
+            <option value="7">7.0+ (Хорошие)</option>
+            <option value="8">8.0+ (Шедевры)</option>
+            <option value="8.5">8.5+ (Лучшее из лучшего)</option>
+          </select>
+        </div>
+
+        <button id="spinBtn" class="btn-primary">Испытать удачу 🎲</button>
+      </section>
+
+      <section id="resultCard" class="result-card empty">
+        <div class="poster-wrapper">
+          <img id="moviePoster" src="" alt="Постер фильма" referrerpolicy="no-referrer" />
+        </div>
+        <div class="movie-info">
+          <div class="movie-header">
+            <h2 id="movieTitle">Название фильма</h2>
+            <span id="movieRating" class="rating-badge">0.0</span>
+          </div>
+          <p id="movieYear" class="movie-meta">Год выпуска</p>
+          <p id="movieDescription" class="movie-description">Описание...</p>
+          <a id="kpLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            Смотреть на Кинопоиске ↗
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <script define:vars={{ localMovies }}>
+      // Элементы управления
+      const spinBtn = document.getElementById("spinBtn");
+      const genreSelect = document.getElementById("genreSelect");
+      const yearSelect = document.getElementById("yearSelect");
+      const ratingSelect = document.getElementById("ratingSelect");
+
+      // Элементы карточки результата
+      const resultCard = document.getElementById("resultCard");
+      const moviePoster = document.getElementById("moviePoster");
+      const movieTitle = document.getElementById("movieTitle");
+      const movieRating = document.getElementById("movieRating");
+      const movieYear = document.getElementById("movieYear");
+      const movieDescription = document.getElementById("movieDescription");
+      const kpLink = document.getElementById("kpLink");
+
+      // Функция рандома
+      spinBtn.addEventListener("click", () => {
+        const selectedGenre = genreSelect.value;
+        const selectedYear = yearSelect.value ? Number(yearSelect.value) : null;
+        const minRating = Number(ratingSelect.value);
+
+        // Фильтруем нашу базу из 1000 фильмов прямо в памяти браузера (займет 0.1 миллисекунды)
+        let filtered = localMovies.filter((movie) => {
+          // Проверка рейтинга
+          if (movie.rating?.kp < minRating) return false;
+
+          // Проверка года
+          if (selectedYear && movie.year !== selectedYear) return false;
+
+          // Проверка жанра
+          if (selectedGenre && !movie.genres?.some((g) => g.name === selectedGenre)) return false;
+
+          return true;
+        });
+
+        // Если под такие жесткие фильтры ничего не нашлось
+        if (filtered.length === 0) {
+          alert('Ничего не найдено! Попробуй смягчить фильтры (например, снизить рейтинг или выбрать "Любой год").');
+          return;
+        }
+
+        // Выбираем случайный фильм из отфильтрованных
+        const randomIndex = Math.floor(Math.random() * filtered.length);
+        const luckyMovie = filtered[randomIndex];
+
+        // Наполняем DOM-структуру данными
+        movieTitle.textContent = luckyMovie.name || luckyMovie.alternativeName || "Без названия";
+        movieRating.textContent = luckyMovie.rating?.kp ? luckyMovie.rating.kp.toFixed(1) : "?.?";
+        movieYear.textContent = `📅 Год: ${luckyMovie.year}`;
+        movieDescription.textContent = luckyMovie.description || "Описание к этому фильму еще не завезли.";
+        moviePoster.src = (luckyMovie.poster?.url || "") + "?t=" + Date.now();
+        moviePoster.alt = luckyMovie.name;
+
+        // Ссылка на Кинопоиск по ID фильма
+        kpLink.href = `https://www.kinopoisk.ru/film/${luckyMovie.id}/`;
+
+        // Показываем карточку (убираем класс empty)
+        resultCard.classList.remove("empty");
+
+        // Плавный скролл к результату для мобилок
+        resultCard.scrollIntoView({ behavior: "smooth" });
+      });
+    </script>
+  </body>
 </html>
+
+<style>
+  :root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --accent: #f97316;
+    --accent-hover: #ea580c;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+  }
+
+  body {
+    margin: 0;
+    font-family:
+      system-ui,
+      -apple-system,
+      sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+  }
+
+  .app-container {
+    width: 100%;
+    max-width: 800px;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin: 0 0 0.5rem 0;
+    color: var(--accent);
+  }
+
+  .subtitle {
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  /* Сетка фильтров */
+  .filters-section {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+    align-items: flex-end;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  label {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  select {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    border: 1px solid #334155;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+
+  select:focus {
+    border-color: var(--accent);
+  }
+
+  /* Кнопки */
+  .btn-primary {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    height: 46px;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--accent-hover);
+  }
+
+  .btn-secondary {
+    display: inline-block;
+    background-color: #334155;
+    color: var(--text-main);
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.2s;
+    margin-top: 1rem;
+  }
+
+  .btn-secondary:hover {
+    background-color: #475569;
+  }
+
+  /* Карточка результата */
+  .result-card {
+    background-color: var(--card-bg);
+    border-radius: 1rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Класс для скрытия карточки, пока кнопка не нажата */
+  .result-card.empty {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .poster-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 450px;
+  }
+
+  .movie-info {
+    padding: 2rem 2rem 2rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .movie-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .movie-header h2 {
+    margin: 0;
+    font-size: 1.75rem;
+  }
+
+  .rating-badge {
+    background-color: #16a34a;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+
+  .movie-meta {
+    color: var(--text-muted);
+    margin: 0.5rem 0 1.5rem 0;
+  }
+
+  .movie-description {
+    line-height: 1.6;
+    color: #cbd5e1;
+    flex-grow: 1;
+    margin: 0;
+  }
+
+  /* Адаптив под мобилки */
+  @media (max-width: 640px) {
+    .result-card {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .movie-info {
+      padding: 1.5rem;
+    }
+    .poster-wrapper img {
+      max-height: 350px;
+    }
+  }
+</style>
