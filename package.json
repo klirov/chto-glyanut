@@ -6,8 +6,8 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "node --env-file=.env src/scripts/build-cache.js && astro dev",
-    "build": "node --env-file=.env src/scripts/build-cache.js && astro build",
+    "dev": "node src/scripts/build-cache.js && astro dev",
+    "build": "node src/scripts/build-cache.js && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },

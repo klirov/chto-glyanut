@@ -1,6 +1,10 @@
 import fs from "fs";
 import path from "path";
 
+try {
+  process.loadEnvFile();
+} catch {}
+
 // process.env автоматически подтянет ключ из .env благодаря настройке запуска (см. Шаг 4)
 const API_KEY = process.env.KINOPOISK_API_KEY;
 const OUTPUT_PATH = path.resolve("src/data/movies.json");
