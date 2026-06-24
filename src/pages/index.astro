@@ -1,10 +1,8 @@
 ---
 import localMovies from "../data/movies.json";
 
-// Собираем жанры и делаем первую букву заглавной прямо при генерации опций
 const allGenres = [...new Set(localMovies.flatMap((m) => m.genres?.map((g) => g.name) || []))].sort();
 
-// Вычисляем минимальный и максимальный год динамически из базы для ползунков
 const years = localMovies.map((m) => m.year).filter(Boolean);
 const minYear = Math.min(...years) || 1900;
 const maxYear = Math.max(...years) || 2026;
@@ -13,32 +11,39 @@ const maxYear = Math.max(...years) || 2026;
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="referrer" content="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chto-glyanut | Что посмотреть вечером</title>
+
+    <link rel="icon" type="image/svg+xml" href={import.meta.env.BASE_URL + "favicon.svg"} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Chto-glyanut</title>
   </head>
   <body>
     <div class="app-container">
       <header>
-        <h1>🎬 Chto-glyanut</h1>
-        <p class="subtitle">Идеальный фильм без долгих споров</p>
+        <h1>🎬 Chto-glyanut (beta)</h1>
+        <p class="subtitle">Идеальный фильм на вечер</p>
       </header>
 
       <div class="main-layout">
-        
         <aside class="sidebar-filters">
           <h2 class="sidebar-title">Настройки поиска</h2>
-          
+
           <div class="filter-group">
             <label for="genreSelect">Жанр</label>
             <select id="genreSelect">
               <option value="">Любой жанр</option>
-              {allGenres.map((genre) => (
-                <option value={genre}>
-                  {genre.charAt(0).toUpperCase() + genre.slice(1)}
-                </option>
-              ))}
+              {
+                allGenres.map((genre) => (
+                  <option value={genre}>{genre.charAt(0).toUpperCase() + genre.slice(1)}</option>
+                ))
+              }
             </select>
           </div>
 
@@ -46,13 +51,13 @@ const maxYear = Math.max(...years) || 2026;
             <label for="countrySelect">Производство</label>
             <select id="countrySelect">
               <option value="all">Все страны</option>
-              <option value="ru">Только российские</option>
-              <option value="foreign">Только зарубежные</option>
+              <option value="ru">Российские</option>
+              <option value="foreign">Зарубежные</option>
             </select>
           </div>
 
           <div class="filter-group">
-            <label>Минимальный рейтинг (КП)</label>
+            <label>Минимальный рейтинг (Кинопоиск)</label>
             <div class="range-controls-row">
               <input type="range" id="ratingSlider" min="1" max="10" step="0.1" value="7.0" />
               <input type="number" id="ratingInput" min="1" max="10" step="0.1" value="7.0" class="num-input-small" />
@@ -65,12 +70,26 @@ const maxYear = Math.max(...years) || 2026;
               <div class="year-row">
                 <span>От</span>
                 <input type="range" id="yearFromSlider" min={minYear} max={maxYear} value={minYear} />
-                <input type="number" id="yearFromInput" min={minYear} max={maxYear} value={minYear} class="num-input-year" />
+                <input
+                  type="number"
+                  id="yearFromInput"
+                  min={minYear}
+                  max={maxYear}
+                  value={minYear}
+                  class="num-input-year"
+                />
               </div>
               <div class="year-row">
                 <span>До</span>
                 <input type="range" id="yearToSlider" min={minYear} max={maxYear} value={maxYear} />
-                <input type="number" id="yearToInput" min={minYear} max={maxYear} value={maxYear} class="num-input-year" />
+                <input
+                  type="number"
+                  id="yearToInput"
+                  min={minYear}
+                  max={maxYear}
+                  value={maxYear}
+                  class="num-input-year"
+                />
               </div>
             </div>
           </div>
@@ -103,7 +122,6 @@ const maxYear = Math.max(...years) || 2026;
             <p>👈 Настрой фильтры слева и нажми кнопку, чтобы подобрать идеальное кино на вечер!</p>
           </div>
         </main>
-
       </div>
     </div>
 
@@ -111,7 +129,7 @@ const maxYear = Math.max(...years) || 2026;
       const spinBtn = document.getElementById("spinBtn");
       const genreSelect = document.getElementById("genreSelect");
       const countrySelect = document.getElementById("countrySelect");
-      
+
       // Элементы управления рейтингом
       const ratingSlider = document.getElementById("ratingSlider");
       const ratingInput = document.getElementById("ratingInput");
@@ -135,7 +153,9 @@ const maxYear = Math.max(...years) || 2026;
 
       // Функция взаимной синхронизации ползунков и инпутов
       function setupSync(slider, input) {
-        slider.addEventListener("input", () => { input.value = slider.value; });
+        slider.addEventListener("input", () => {
+          input.value = slider.value;
+        });
         input.addEventListener("input", () => {
           if (input.value) slider.value = input.value;
         });
@@ -174,7 +194,7 @@ const maxYear = Math.max(...years) || 2026;
         });
 
         if (filtered.length === 0) {
-          alert('Ничего не найдено! Попробуй расширить диапазоны годов или снизить планку рейтинга.');
+          alert("Ничего не найдено! Попробуй расширить диапазоны годов или снизить планку рейтинга.");
           return;
         }
 
@@ -185,13 +205,13 @@ const maxYear = Math.max(...years) || 2026;
         movieTitle.textContent = luckyMovie.name;
         movieRating.textContent = luckyMovie.rating?.kp ? luckyMovie.rating.kp.toFixed(1) : "?.?";
         movieYear.textContent = `📅 ${luckyMovie.year} год`;
-        
+
         // Красиво склеиваем страны через запятую
-        const countriesList = luckyMovie.countries?.map(c => c.name).join(", ");
+        const countriesList = luckyMovie.countries?.map((c) => c.name).join(", ");
         movieCountries.textContent = `🌍 ${countriesList || "Неизвестно"}`;
-        
+
         movieDescription.textContent = luckyMovie.description;
-        
+
         // Обходим кэш блокировок картинок
         moviePoster.src = (luckyMovie.poster?.url || "") + "?t=" + Date.now();
         moviePoster.alt = luckyMovie.name;
@@ -220,7 +240,9 @@ const maxYear = Math.max(...years) || 2026;
 
   body {
     margin: 0;
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
     background-color: var(--bg-color);
     color: var(--text-main);
     display: flex;
@@ -287,7 +309,9 @@ const maxYear = Math.max(...years) || 2026;
     font-weight: 500;
   }
 
-  select, .num-input-small, .num-input-year {
+  select,
+  .num-input-small,
+  .num-input-year {
     background-color: var(--bg-color);
     color: var(--text-main);
     border: 1px solid var(--border);
@@ -298,7 +322,8 @@ const maxYear = Math.max(...years) || 2026;
     transition: border-color 0.2s;
   }
 
-  select:focus, input:focus {
+  select:focus,
+  input:focus {
     border-color: var(--accent);
   }
 
@@ -324,7 +349,7 @@ const maxYear = Math.max(...years) || 2026;
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    background: rgba(0,0,0,0.15);
+    background: rgba(0, 0, 0, 0.15);
     padding: 0.75rem;
     border-radius: 0.5rem;
   }
@@ -459,12 +484,12 @@ const maxYear = Math.max(...years) || 2026;
   }
 
   .meta-tag {
-    background-color: rgba(255,255,255,0.07);
+    background-color: rgba(255, 255, 255, 0.07);
     padding: 0.35rem 0.75rem;
     border-radius: 2rem;
     font-size: 0.85rem;
     color: #cbd5e1;
-    border: 1px solid rgba(255,255,255,0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
   }
 
   .movie-description {
