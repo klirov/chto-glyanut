@@ -1,16 +1,13 @@
 ---
-// === ВРЕМЯ СБОРКИ (SERVER-SIDE / BUILD TIME) ===
-// Этот код выполнится ОДИН РАЗ на этапе сборки сайта.
-// В браузер пользователю он не улетит.
-
 import localMovies from "../data/movies.json";
 
-// Вытаскиваем все уникальные жанры из нашей локальной базы, чтобы заполнить <select>
-// Используем flatMap, так как у каждого фильма массив жанров, и Set, чтобы убрать дубли
+// Собираем жанры и делаем первую букву заглавной прямо при генерации опций
 const allGenres = [...new Set(localMovies.flatMap((m) => m.genres?.map((g) => g.name) || []))].sort();
 
-// Генерируем список годов (от старых к новым), которые есть в нашей базе
-const allYears = [...new Set(localMovies.map((m) => m.year))].sort((a, b) => b - a);
+// Вычисляем минимальный и максимальный год динамически из базы для ползунков
+const years = localMovies.map((m) => m.year).filter(Boolean);
+const minYear = Math.min(...years) || 1900;
+const maxYear = Math.max(...years) || 2026;
 ---
 
 <html lang="ru">
@@ -25,117 +22,185 @@ const allYears = [...new Set(localMovies.map((m) => m.year))].sort((a, b) => b -
     <div class="app-container">
       <header>
         <h1>🎬 Chto-glyanut</h1>
-        <p class="subtitle">Подбор фильма под интересы или рандом</p>
+        <p class="subtitle">Идеальный фильм без долгих споров</p>
       </header>
 
-      <section class="filters-section">
-        <div class="filter-group">
-          <label for="genreSelect">Жанр</label>
-          <select id="genreSelect">
-            <option value="">Любой жанр</option>
-            {allGenres.map((genre) => <option value={genre}>{genre}</option>)}
-          </select>
-        </div>
-
-        <div class="filter-group">
-          <label for="yearSelect">Год</label>
-          <select id="yearSelect">
-            <option value="">Любой год</option>
-            {allYears.map((year) => <option value={year}>{year}</option>)}
-          </select>
-        </div>
-
-        <div class="filter-group">
-          <label for="ratingSelect">Минимальный рейтинг</label>
-          <select id="ratingSelect">
-            <option value="7">7.0+ (Хорошие)</option>
-            <option value="8">8.0+ (Шедевры)</option>
-            <option value="8.5">8.5+ (Лучшее из лучшего)</option>
-          </select>
-        </div>
-
-        <button id="spinBtn" class="btn-primary">Испытать удачу 🎲</button>
-      </section>
-
-      <section id="resultCard" class="result-card empty">
-        <div class="poster-wrapper">
-          <img id="moviePoster" src="" alt="Постер фильма" referrerpolicy="no-referrer" />
-        </div>
-        <div class="movie-info">
-          <div class="movie-header">
-            <h2 id="movieTitle">Название фильма</h2>
-            <span id="movieRating" class="rating-badge">0.0</span>
+      <div class="main-layout">
+        
+        <aside class="sidebar-filters">
+          <h2 class="sidebar-title">Настройки поиска</h2>
+          
+          <div class="filter-group">
+            <label for="genreSelect">Жанр</label>
+            <select id="genreSelect">
+              <option value="">Любой жанр</option>
+              {allGenres.map((genre) => (
+                <option value={genre}>
+                  {genre.charAt(0).toUpperCase() + genre.slice(1)}
+                </option>
+              ))}
+            </select>
           </div>
-          <p id="movieYear" class="movie-meta">Год выпуска</p>
-          <p id="movieDescription" class="movie-description">Описание...</p>
-          <a id="kpLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-            Смотреть на Кинопоиске ↗
-          </a>
-        </div>
-      </section>
+
+          <div class="filter-group">
+            <label for="countrySelect">Производство</label>
+            <select id="countrySelect">
+              <option value="all">Все страны</option>
+              <option value="ru">Только российские</option>
+              <option value="foreign">Только зарубежные</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label>Минимальный рейтинг (КП)</label>
+            <div class="range-controls-row">
+              <input type="range" id="ratingSlider" min="1" max="10" step="0.1" value="7.0" />
+              <input type="number" id="ratingInput" min="1" max="10" step="0.1" value="7.0" class="num-input-small" />
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <label>Год выпуска</label>
+            <div class="year-range-container">
+              <div class="year-row">
+                <span>От</span>
+                <input type="range" id="yearFromSlider" min={minYear} max={maxYear} value={minYear} />
+                <input type="number" id="yearFromInput" min={minYear} max={maxYear} value={minYear} class="num-input-year" />
+              </div>
+              <div class="year-row">
+                <span>До</span>
+                <input type="range" id="yearToSlider" min={minYear} max={maxYear} value={maxYear} />
+                <input type="number" id="yearToInput" min={minYear} max={maxYear} value={maxYear} class="num-input-year" />
+              </div>
+            </div>
+          </div>
+
+          <button id="spinBtn" class="btn-primary">Испытать удачу 🎲</button>
+        </aside>
+
+        <main class="content-area">
+          <section id="resultCard" class="result-card empty">
+            <div class="poster-wrapper">
+              <img id="moviePoster" src="" alt="Постер фильма" referrerpolicy="no-referrer" />
+            </div>
+            <div class="movie-info">
+              <div class="movie-header">
+                <h2 id="movieTitle">Название фильма</h2>
+                <span id="movieRating" class="rating-badge">0.0</span>
+              </div>
+              <div class="movie-meta-tags">
+                <span id="movieYear" class="meta-tag">📅 Год</span>
+                <span id="movieCountries" class="meta-tag">🌍 Страна</span>
+              </div>
+              <p id="movieDescription" class="movie-description">Описание...</p>
+              <a id="kpLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                Смотреть на Кинопоиске ↗
+              </a>
+            </div>
+          </section>
+
+          <div id="placeholderCard" class="placeholder-card">
+            <p>👈 Настрой фильтры слева и нажми кнопку, чтобы подобрать идеальное кино на вечер!</p>
+          </div>
+        </main>
+
+      </div>
     </div>
 
     <script define:vars={{ localMovies }}>
-      // Элементы управления
       const spinBtn = document.getElementById("spinBtn");
       const genreSelect = document.getElementById("genreSelect");
-      const yearSelect = document.getElementById("yearSelect");
-      const ratingSelect = document.getElementById("ratingSelect");
+      const countrySelect = document.getElementById("countrySelect");
+      
+      // Элементы управления рейтингом
+      const ratingSlider = document.getElementById("ratingSlider");
+      const ratingInput = document.getElementById("ratingInput");
 
-      // Элементы карточки результата
+      // Элементы управления годами
+      const yearFromSlider = document.getElementById("yearFromSlider");
+      const yearFromInput = document.getElementById("yearFromInput");
+      const yearToSlider = document.getElementById("yearToSlider");
+      const yearToInput = document.getElementById("yearToInput");
+
+      // Карточки вывода
       const resultCard = document.getElementById("resultCard");
+      const placeholderCard = document.getElementById("placeholderCard");
       const moviePoster = document.getElementById("moviePoster");
       const movieTitle = document.getElementById("movieTitle");
       const movieRating = document.getElementById("movieRating");
       const movieYear = document.getElementById("movieYear");
+      const movieCountries = document.getElementById("movieCountries");
       const movieDescription = document.getElementById("movieDescription");
       const kpLink = document.getElementById("kpLink");
 
-      // Функция рандома
+      // Функция взаимной синхронизации ползунков и инпутов
+      function setupSync(slider, input) {
+        slider.addEventListener("input", () => { input.value = slider.value; });
+        input.addEventListener("input", () => {
+          if (input.value) slider.value = input.value;
+        });
+      }
+
+      setupSync(ratingSlider, ratingInput);
+      setupSync(yearFromSlider, yearFromInput);
+      setupSync(yearToSlider, yearToInput);
+
+      // Логика кнопки рандома
       spinBtn.addEventListener("click", () => {
         const selectedGenre = genreSelect.value;
-        const selectedYear = yearSelect.value ? Number(yearSelect.value) : null;
-        const minRating = Number(ratingSelect.value);
+        const selectedCountryType = countrySelect.value;
+        const minRating = Number(ratingInput.value);
+        const fromYear = Number(yearFromInput.value);
+        const toYear = Number(yearToInput.value);
 
-        // Фильтруем нашу базу из 1000 фильмов прямо в памяти браузера (займет 0.1 миллисекунды)
         let filtered = localMovies.filter((movie) => {
-          // Проверка рейтинга
-          if (movie.rating?.kp < minRating) return false;
+          // 1. Фильтр по рейтингу
+          if ((movie.rating?.kp || 0) < minRating) return false;
 
-          // Проверка года
-          if (selectedYear && movie.year !== selectedYear) return false;
+          // 2. Фильтр по диапазону годов
+          if (movie.year < fromYear || movie.year > toYear) return false;
 
-          // Проверка жанра
+          // 3. Фильтр по жанру
           if (selectedGenre && !movie.genres?.some((g) => g.name === selectedGenre)) return false;
+
+          // 4. Улучшенный фильтр по странам производства
+          if (selectedCountryType !== "all") {
+            const isRussian = movie.countries?.some((c) => c.name.toLowerCase() === "россия");
+            if (selectedCountryType === "ru" && !isRussian) return false;
+            if (selectedCountryType === "foreign" && isRussian) return false;
+          }
 
           return true;
         });
 
-        // Если под такие жесткие фильтры ничего не нашлось
         if (filtered.length === 0) {
-          alert('Ничего не найдено! Попробуй смягчить фильтры (например, снизить рейтинг или выбрать "Любой год").');
+          alert('Ничего не найдено! Попробуй расширить диапазоны годов или снизить планку рейтинга.');
           return;
         }
 
-        // Выбираем случайный фильм из отфильтрованных
         const randomIndex = Math.floor(Math.random() * filtered.length);
         const luckyMovie = filtered[randomIndex];
 
-        // Наполняем DOM-структуру данными
-        movieTitle.textContent = luckyMovie.name || luckyMovie.alternativeName || "Без названия";
+        // Рендерим данные в карточку
+        movieTitle.textContent = luckyMovie.name;
         movieRating.textContent = luckyMovie.rating?.kp ? luckyMovie.rating.kp.toFixed(1) : "?.?";
-        movieYear.textContent = `📅 Год: ${luckyMovie.year}`;
-        movieDescription.textContent = luckyMovie.description || "Описание к этому фильму еще не завезли.";
+        movieYear.textContent = `📅 ${luckyMovie.year} год`;
+        
+        // Красиво склеиваем страны через запятую
+        const countriesList = luckyMovie.countries?.map(c => c.name).join(", ");
+        movieCountries.textContent = `🌍 ${countriesList || "Неизвестно"}`;
+        
+        movieDescription.textContent = luckyMovie.description;
+        
+        // Обходим кэш блокировок картинок
         moviePoster.src = (luckyMovie.poster?.url || "") + "?t=" + Date.now();
         moviePoster.alt = luckyMovie.name;
 
-        // Ссылка на Кинопоиск по ID фильма
         kpLink.href = `https://www.kinopoisk.ru/film/${luckyMovie.id}/`;
 
-        // Показываем карточку (убираем класс empty)
+        // Переключаем видимость карточек
+        placeholderCard.style.display = "none";
         resultCard.classList.remove("empty");
-
-        // Плавный скролл к результату для мобилок
         resultCard.scrollIntoView({ behavior: "smooth" });
       });
     </script>
@@ -150,14 +215,12 @@ const allYears = [...new Set(localMovies.map((m) => m.year))].sort((a, b) => b -
     --accent-hover: #ea580c;
     --text-main: #f8fafc;
     --text-muted: #94a3b8;
+    --border: #334155;
   }
 
   body {
     margin: 0;
-    font-family:
-      system-ui,
-      -apple-system,
-      sans-serif;
+    font-family: system-ui, -apple-system, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-main);
     display: flex;
@@ -167,7 +230,7 @@ const allYears = [...new Set(localMovies.map((m) => m.year))].sort((a, b) => b -
 
   .app-container {
     width: 100%;
-    max-width: 800px;
+    max-width: 1100px;
   }
 
   header {
@@ -186,17 +249,30 @@ const allYears = [...new Set(localMovies.map((m) => m.year))].sort((a, b) => b -
     margin: 0;
   }
 
-  /* Сетка фильтров */
-  .filters-section {
+  /* Основная двухколоночная сетка */
+  .main-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  /* Левый сайдбар с фильтрами */
+  .sidebar-filters {
     background-color: var(--card-bg);
     padding: 1.5rem;
     border-radius: 1rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 1.25rem;
-    align-items: flex-end;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
+  }
+
+  .sidebar-title {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.75rem;
   }
 
   .filter-group {
@@ -211,20 +287,83 @@ const allYears = [...new Set(localMovies.map((m) => m.year))].sort((a, b) => b -
     font-weight: 500;
   }
 
-  select {
+  select, .num-input-small, .num-input-year {
     background-color: var(--bg-color);
     color: var(--text-main);
-    border: 1px solid #334155;
-    padding: 0.75rem;
+    border: 1px solid var(--border);
+    padding: 0.65rem;
     border-radius: 0.5rem;
-    font-size: 1rem;
+    font-size: 0.95rem;
     outline: none;
-    cursor: pointer;
     transition: border-color 0.2s;
   }
 
-  select:focus {
+  select:focus, input:focus {
     border-color: var(--accent);
+  }
+
+  /* Тюнинг кастомных инпутов */
+  .range-controls-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  input[type="range"] {
+    flex-grow: 1;
+    accent-color: var(--accent);
+    cursor: pointer;
+  }
+
+  .num-input-small {
+    width: 55px;
+    text-align: center;
+  }
+
+  .year-range-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background: rgba(0,0,0,0.15);
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+  }
+
+  .year-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .year-row span {
+    width: 20px;
+    color: var(--text-muted);
+  }
+
+  .num-input-year {
+    width: 65px;
+    text-align: center;
+    padding: 0.4rem;
+  }
+
+  /* Правая контентная зона */
+  .content-area {
+    min-height: 450px;
+  }
+
+  .placeholder-card {
+    border: 2px dashed var(--border);
+    border-radius: 1rem;
+    padding: 3rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 350px;
   }
 
   /* Кнопки */
@@ -232,13 +371,13 @@ const allYears = [...new Set(localMovies.map((m) => m.year))].sort((a, b) => b -
     background-color: var(--accent);
     color: white;
     border: none;
-    padding: 0.75rem 1.5rem;
+    padding: 0.85rem;
     border-radius: 0.5rem;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.2s;
-    height: 46px;
+    margin-top: 0.5rem;
   }
 
   .btn-primary:hover {
@@ -255,7 +394,7 @@ const allYears = [...new Set(localMovies.map((m) => m.year))].sort((a, b) => b -
     font-weight: 500;
     text-align: center;
     transition: background-color 0.2s;
-    margin-top: 1rem;
+    margin-top: auto;
   }
 
   .btn-secondary:hover {
@@ -268,23 +407,13 @@ const allYears = [...new Set(localMovies.map((m) => m.year))].sort((a, b) => b -
     border-radius: 1rem;
     overflow: hidden;
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 280px 1fr;
     gap: 2rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    opacity: 1;
-    transform: translateY(0);
   }
 
-  /* Класс для скрытия карточки, пока кнопка не нажата */
   .result-card.empty {
-    opacity: 0;
-    transform: translateY(20px);
-    pointer-events: none;
-    height: 0;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+    display: none;
   }
 
   .poster-wrapper img {
@@ -295,7 +424,7 @@ const allYears = [...new Set(localMovies.map((m) => m.year))].sort((a, b) => b -
   }
 
   .movie-info {
-    padding: 2rem 2rem 2rem 0;
+    padding: 1.5rem 1.5rem 1.5rem 0;
     display: flex;
     flex-direction: column;
   }
@@ -305,36 +434,51 @@ const allYears = [...new Set(localMovies.map((m) => m.year))].sort((a, b) => b -
     justify-content: space-between;
     align-items: flex-start;
     gap: 1rem;
+    margin-bottom: 0.75rem;
   }
 
   .movie-header h2 {
     margin: 0;
-    font-size: 1.75rem;
+    font-size: 1.6rem;
   }
 
   .rating-badge {
     background-color: #16a34a;
     color: white;
-    padding: 0.25rem 0.75rem;
+    padding: 0.25rem 0.65rem;
     border-radius: 0.5rem;
     font-weight: 700;
-    font-size: 1.125rem;
+    font-size: 1.1rem;
   }
 
-  .movie-meta {
-    color: var(--text-muted);
-    margin: 0.5rem 0 1.5rem 0;
+  .movie-meta-tags {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .meta-tag {
+    background-color: rgba(255,255,255,0.07);
+    padding: 0.35rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    border: 1px solid rgba(255,255,255,0.05);
   }
 
   .movie-description {
     line-height: 1.6;
     color: #cbd5e1;
-    flex-grow: 1;
-    margin: 0;
+    margin: 0 0 1.5rem 0;
+    font-size: 0.95rem;
   }
 
-  /* Адаптив под мобилки */
-  @media (max-width: 640px) {
+  /* Адаптив под мобильные девайсы */
+  @media (max-width: 850px) {
+    .main-layout {
+      grid-template-columns: 1fr;
+    }
     .result-card {
       grid-template-columns: 1fr;
       gap: 0;
@@ -343,7 +487,11 @@ const allYears = [...new Set(localMovies.map((m) => m.year))].sort((a, b) => b -
       padding: 1.5rem;
     }
     .poster-wrapper img {
-      max-height: 350px;
+      max-height: 380px;
+    }
+    .placeholder-card {
+      padding: 2rem;
+      min-height: 150px;
     }
   }
 </style>
