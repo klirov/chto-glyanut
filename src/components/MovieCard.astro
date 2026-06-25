@@ -1,0 +1,240 @@
+---
+// Компонент отображения карточки фильма
+---
+
+<div class="card-container">
+  <section id="resultCard" class="result-card empty">
+    <div class="poster-wrapper">
+      <img id="moviePoster" src="" alt="Постер фильма" referrerpolicy="no-referrer" />
+    </div>
+    <div class="movie-info">
+      <div class="movie-header">
+        <div class="title-block">
+          <h2 id="movieTitle">Название фильма</h2>
+          <div id="movieOrigTitle" class="original-title">Original Title</div>
+        </div>
+        <div class="ratings-row">
+          <span id="movieRatingKp" class="rating-badge kp" title="">КП 0.0</span>
+          <span id="movieRatingImdb" class="rating-badge imdb" title="">IMDb 0.0</span>
+        </div>
+      </div>
+
+      <div class="movie-meta-tags">
+        <span id="movieTop" class="meta-tag badge-top">🔥 Топ 250</span>
+        <span id="movieAge" class="meta-tag badge-age">18+</span>
+        <span id="movieYear" class="meta-tag">📅 Год</span>
+        <span id="movieLength" class="meta-tag">⏱️ Длительность</span>
+        <span id="movieCountries" class="meta-tag">🌍 Страна</span>
+      </div>
+
+      <p id="movieDescription" class="movie-description">Описание...</p>
+
+      <a id="kpLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+        <div class="btn-content">
+          <img id="movieLogo" src="" alt="Logo" class="btn-logo hidden" />
+          <span id="btnText">Смотреть на Кинопоиске ↗</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <div id="placeholderCard" class="placeholder-card">
+    <p>Настрой фильтры и нажми кнопку, чтобы подобрать идеальное кино!</p>
+  </div>
+</div>
+
+<style>
+  .card-container {
+    min-height: 450px;
+    height: 100%;
+  }
+
+  .placeholder-card {
+    border: 2px dashed #334155;
+    border-radius: 1rem;
+    padding: 3rem;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 350px;
+    box-sizing: border-box;
+  }
+
+  .result-card {
+    background-color: #1e293b;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  }
+
+  :global(.result-card.empty) {
+    display: none !important;
+  }
+
+  .poster-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 460px;
+  }
+
+  .movie-info {
+    padding: 1.5rem 1.5rem 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .movie-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .title-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .movie-header h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    color: #f8fafc;
+  }
+
+  .original-title {
+    font-size: 0.95rem;
+    color: #94a3b8;
+  }
+
+  .ratings-row {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .rating-badge {
+    padding: 0.3rem 0.65rem;
+    border-radius: 0.5rem;
+    font-weight: 800;
+    font-size: 0.95rem;
+    cursor: help;
+  }
+
+  .rating-badge.kp {
+    background-color: #16a34a;
+    color: white;
+  }
+
+  .rating-badge.imdb {
+    background-color: #e6b91e;
+    color: #000000;
+  }
+
+  .movie-meta-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .meta-tag {
+    background-color: rgba(255, 255, 255, 0.06);
+    padding: 0.35rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+  }
+
+  .badge-age {
+    background-color: rgba(239, 68, 68, 0.15);
+    border-color: rgba(239, 68, 68, 0.3);
+    color: #f87171;
+    font-weight: 700;
+  }
+
+  .badge-top {
+    background-color: rgba(234, 179, 8, 0.15);
+    border-color: rgba(234, 179, 8, 0.3);
+    color: #facc15;
+    font-weight: 700;
+  }
+
+  .movie-description {
+    line-height: 1.6;
+    color: #cbd5e1;
+    margin: 0 0 1.5rem 0;
+    font-size: 0.95rem;
+  }
+
+  .btn-secondary {
+    display: inline-block;
+    background-color: #334155;
+    color: #f8fafc;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition:
+      background-color 0.2s,
+      transform 0.1s;
+    margin-top: auto;
+    text-align: center;
+  }
+
+  .btn-secondary:hover {
+    background-color: #475569;
+  }
+
+  .btn-secondary:active {
+    transform: scale(0.98);
+  }
+
+  .btn-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 28px;
+  }
+
+  .btn-logo {
+    max-height: 100%;
+    max-width: 140px;
+    object-fit: contain;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5));
+  }
+
+  :global(.btn-logo.hidden) {
+    display: none !important;
+  }
+
+  @media (max-width: 850px) {
+    .result-card {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .movie-info {
+      padding: 1.5rem;
+    }
+    .poster-wrapper img {
+      max-height: 380px;
+    }
+    .placeholder-card {
+      padding: 2rem;
+      min-height: 150px;
+    }
+  }
+</style>

@@ -1,7 +1,10 @@
 ---
 import localMovies from "../data/movies.json";
+import FilterSidebar from "../components/FilterSidebar.astro";
+import MovieCard from "../components/MovieCard.astro";
+import Notification from "../components/Notification.astro";
 
-const allGenres = [...new Set(localMovies.flatMap((m) => m.genres?.map((g) => g.name) || []))].sort();
+const allGenres = [...new Set(localMovies.flatMap((m) => m.genres || []))].sort();
 
 const years = localMovies.map((m) => m.year).filter(Boolean);
 const minYear = Math.min(...years) || 1900;
@@ -13,7 +16,6 @@ const maxYear = Math.max(...years) || 2026;
     <meta charset="utf-8" />
     <meta name="referrer" content="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="icon" type="image/svg+xml" href={import.meta.env.BASE_URL + "favicon.svg"} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,137 +23,84 @@ const maxYear = Math.max(...years) || 2026;
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-
     <title>Chto-glyanut</title>
   </head>
   <body>
+    <Notification />
+
     <div class="app-container">
       <header>
-        <h1>🎬 Что глянуть? (beta)</h1>
-        <p class="subtitle">Идеальный фильм на вечер</p>
+        <h1>🎬 Что глянуть?</h1>
+        <p class="subtitle">Идеальный выбор на вечер</p>
       </header>
 
       <div class="main-layout">
-        <aside class="sidebar-filters">
-          <h2 class="sidebar-title">Настройки поиска</h2>
-
-          <div class="filter-group">
-            <label for="genreSelect">Жанр</label>
-            <select id="genreSelect">
-              <option value="">Любой жанр</option>
-              {
-                allGenres.map((genre) => (
-                  <option value={genre}>{genre.charAt(0).toUpperCase() + genre.slice(1)}</option>
-                ))
-              }
-            </select>
-          </div>
-
-          <div class="filter-group">
-            <label for="countrySelect">Производство</label>
-            <select id="countrySelect">
-              <option value="all">Все страны</option>
-              <option value="ru">Российские</option>
-              <option value="foreign">Зарубежные</option>
-            </select>
-          </div>
-
-          <div class="filter-group">
-            <label>Минимальный рейтинг (Кинопоиск)</label>
-            <div class="range-controls-row">
-              <input type="range" id="ratingSlider" min="1" max="10" step="0.1" value="7.0" />
-              <input type="number" id="ratingInput" min="1" max="10" step="0.1" value="7.0" class="num-input-small" />
-            </div>
-          </div>
-
-          <div class="filter-group">
-            <label>Год выпуска</label>
-            <div class="year-range-container">
-              <div class="year-row">
-                <span>От</span>
-                <input type="range" id="yearFromSlider" min={minYear} max={maxYear} value={minYear} />
-                <input
-                  type="number"
-                  id="yearFromInput"
-                  min={minYear}
-                  max={maxYear}
-                  value={minYear}
-                  class="num-input-year"
-                />
-              </div>
-              <div class="year-row">
-                <span>До</span>
-                <input type="range" id="yearToSlider" min={minYear} max={maxYear} value={maxYear} />
-                <input
-                  type="number"
-                  id="yearToInput"
-                  min={minYear}
-                  max={maxYear}
-                  value={maxYear}
-                  class="num-input-year"
-                />
-              </div>
-            </div>
-          </div>
-
-          <button id="spinBtn" class="btn-primary">Испытать удачу 🎲</button>
-        </aside>
+        <FilterSidebar allGenres={allGenres} minYear={minYear} maxYear={maxYear} />
 
         <main class="content-area">
-          <section id="resultCard" class="result-card empty">
-            <div class="poster-wrapper">
-              <img id="moviePoster" src="" alt="Постер фильма" referrerpolicy="no-referrer" />
-            </div>
-            <div class="movie-info">
-              <div class="movie-header">
-                <h2 id="movieTitle">Название фильма</h2>
-                <span id="movieRating" class="rating-badge">0.0</span>
-              </div>
-              <div class="movie-meta-tags">
-                <span id="movieYear" class="meta-tag">📅 Год</span>
-                <span id="movieCountries" class="meta-tag">🌍 Страна</span>
-              </div>
-              <p id="movieDescription" class="movie-description">Описание...</p>
-              <a id="kpLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-                Смотреть на Кинопоиске ↗
-              </a>
-            </div>
-          </section>
-
-          <div id="placeholderCard" class="placeholder-card">
-            <p>Настрой фильтры и нажми кнопку, чтобы подобрать идеальное кино на вечер!</p>
-          </div>
+          <MovieCard />
         </main>
       </div>
     </div>
 
     <script define:vars={{ localMovies }}>
+      // Элементы фильтров
       const spinBtn = document.getElementById("spinBtn");
       const genreSelect = document.getElementById("genreSelect");
       const countrySelect = document.getElementById("countrySelect");
+      const top250Checkbox = document.getElementById("top250Checkbox");
 
-      // Элементы управления рейтингом
+      // КП Рейтинг
       const ratingSlider = document.getElementById("ratingSlider");
       const ratingInput = document.getElementById("ratingInput");
 
-      // Элементы управления годами
+      // IMDb Рейтинг (Новое)
+      const imdbRatingSlider = document.getElementById("imdbRatingSlider");
+      const imdbRatingInput = document.getElementById("imdbRatingInput");
+
+      // Года
       const yearFromSlider = document.getElementById("yearFromSlider");
       const yearFromInput = document.getElementById("yearFromInput");
       const yearToSlider = document.getElementById("yearToSlider");
       const yearToInput = document.getElementById("yearToInput");
 
-      // Карточки вывода
+      // Карточка результатов
       const resultCard = document.getElementById("resultCard");
       const placeholderCard = document.getElementById("placeholderCard");
       const moviePoster = document.getElementById("moviePoster");
       const movieTitle = document.getElementById("movieTitle");
-      const movieRating = document.getElementById("movieRating");
+      const movieOrigTitle = document.getElementById("movieOrigTitle");
+      const movieRatingKp = document.getElementById("movieRatingKp");
+      const movieRatingImdb = document.getElementById("movieRatingImdb");
+      const movieTop = document.getElementById("movieTop");
+      const movieAge = document.getElementById("movieAge");
       const movieYear = document.getElementById("movieYear");
+      const movieLength = document.getElementById("movieLength");
       const movieCountries = document.getElementById("movieCountries");
       const movieDescription = document.getElementById("movieDescription");
       const kpLink = document.getElementById("kpLink");
+      const movieLogo = document.getElementById("movieLogo");
+      const btnText = document.getElementById("btnText");
 
-      // Функция взаимной синхронизации ползунков и инпутов
+      // Тост
+      const customNotification = document.getElementById("customNotification");
+      const notificationText = document.getElementById("notificationText");
+      const closeNotificationBtn = document.getElementById("closeNotificationBtn");
+      let toastTimeout = null;
+
+      function showNotification(message) {
+        if (toastTimeout) clearTimeout(toastTimeout);
+        notificationText.textContent = message;
+        customNotification.classList.add("visible");
+        toastTimeout = setTimeout(() => {
+          customNotification.classList.remove("visible");
+        }, 4500);
+      }
+
+      closeNotificationBtn.addEventListener("click", () => {
+        customNotification.classList.remove("visible");
+      });
+
       function setupSync(slider, input) {
         slider.addEventListener("input", () => {
           input.value = slider.value;
@@ -160,65 +109,116 @@ const maxYear = Math.max(...years) || 2026;
           if (input.value) slider.value = input.value;
         });
       }
-
       setupSync(ratingSlider, ratingInput);
+      setupSync(imdbRatingSlider, imdbRatingInput);
       setupSync(yearFromSlider, yearFromInput);
       setupSync(yearToSlider, yearToInput);
 
-      // Логика кнопки рандома
       spinBtn.addEventListener("click", () => {
         const selectedGenre = genreSelect.value;
         const selectedCountryType = countrySelect.value;
+        const onlyTop250 = top250Checkbox.checked;
         const minRating = Number(ratingInput.value);
+        const minImdbRating = Number(imdbRatingInput.value);
         const fromYear = Number(yearFromInput.value);
         const toYear = Number(yearToInput.value);
 
         let filtered = localMovies.filter((movie) => {
-          // 1. Фильтр по рейтингу
+          // Рейтинг Кинопоиска
           if ((movie.rating?.kp || 0) < minRating) return false;
 
-          // 2. Фильтр по диапазону годов
+          // Рейтинг IMDb (Новое)
+          if ((movie.rating?.imdb || 0) < minImdbRating) return false;
+
+          // Диапазон годов
           if (movie.year < fromYear || movie.year > toYear) return false;
 
-          // 3. Фильтр по жанру
-          if (selectedGenre && !movie.genres?.some((g) => g.name === selectedGenre)) return false;
+          // Жанры
+          if (selectedGenre && !movie.genres?.includes(selectedGenre)) return false;
 
-          // 4. Улучшенный фильтр по странам производства
+          // Флаг Топ-250
+          if (onlyTop250 && !movie.top250) return false;
+
+          // Страны
           if (selectedCountryType !== "all") {
-            const isRussian = movie.countries?.some((c) => c.name.toLowerCase() === "россия");
+            const isRussian = movie.countries?.some((c) => c.toLowerCase() === "россия");
             if (selectedCountryType === "ru" && !isRussian) return false;
             if (selectedCountryType === "foreign" && isRussian) return false;
           }
-
           return true;
         });
 
         if (filtered.length === 0) {
-          alert("Ничего не найдено! Попробуй расширить диапазоны годов или снизить планку рейтинга.");
+          showNotification("Ничего не найдено! Попробуй сделать фильтры помягче или снизить требования к рейтингам.");
           return;
         }
 
         const randomIndex = Math.floor(Math.random() * filtered.length);
         const luckyMovie = filtered[randomIndex];
 
-        // Рендерим данные в карточку
+        // Текст и заголовки
         movieTitle.textContent = luckyMovie.name;
-        movieRating.textContent = luckyMovie.rating?.kp ? luckyMovie.rating.kp.toFixed(1) : "?.?";
+        if (luckyMovie.alternativeName && luckyMovie.alternativeName !== luckyMovie.name) {
+          movieOrigTitle.textContent = luckyMovie.alternativeName;
+          movieOrigTitle.style.display = "block";
+        } else {
+          movieOrigTitle.style.display = "none";
+        }
+
+        // Лейблы рейтингов
+        const kpRating = luckyMovie.rating?.kp || 0;
+        const imdbRating = luckyMovie.rating?.imdb || 0;
+
+        movieRatingKp.textContent = `КП ${kpRating.toFixed(1)}`;
+        movieRatingKp.title = `Голосов: ${luckyMovie.votes?.kp?.toLocaleString("ru-RU") || 0}`;
+
+        if (imdbRating > 0) {
+          movieRatingImdb.textContent = `IMDb ${imdbRating.toFixed(1)}`;
+          movieRatingImdb.title = `Голосов: ${luckyMovie.votes?.imdb?.toLocaleString("ru-RU") || 0}`;
+          movieRatingImdb.style.display = "inline-block";
+        } else {
+          movieRatingImdb.style.display = "none";
+        }
+
+        // Топ-250 бадж
+        if (luckyMovie.top250) {
+          movieTop.textContent = `🔥 Топ #${luckyMovie.top250}`;
+          movieTop.style.display = "inline-block";
+        } else {
+          movieTop.style.display = "none";
+        }
+
+        // Возраст
+        if (luckyMovie.ageRating) {
+          movieAge.textContent = luckyMovie.ageRating;
+          movieAge.style.display = "inline-block";
+        } else {
+          movieAge.style.display = "none";
+        }
+
         movieYear.textContent = `📅 ${luckyMovie.year} год`;
+        movieLength.textContent = luckyMovie.movieLength ? `⏱️ ${luckyMovie.movieLength} мин.` : "⏱️ —";
+        movieCountries.textContent = `🌍 ${luckyMovie.countries?.join(", ") || "Неизвестно"}`;
+        movieDescription.textContent = luckyMovie.shortDescription || "Описание отсутствует.";
 
-        // Красиво склеиваем страны через запятую
-        const countriesList = luckyMovie.countries?.map((c) => c.name).join(", ");
-        movieCountries.textContent = `🌍 ${countriesList || "Неизвестно"}`;
-
-        movieDescription.textContent = luckyMovie.description;
-
-        // Обходим кэш блокировок картинок
-        moviePoster.src = (luckyMovie.poster?.url || "") + "?t=" + Date.now();
+        // Постер
+        const posterSrc = luckyMovie.poster?.previewUrl || luckyMovie.poster?.url || "";
+        moviePoster.src = posterSrc ? posterSrc + "?t=" + Date.now() : "";
         moviePoster.alt = luckyMovie.name;
 
+        // Кнопка перехода и логотип
+        if (luckyMovie.logo) {
+          movieLogo.src = luckyMovie.logo;
+          movieLogo.classList.remove("hidden");
+          btnText.textContent = " на Кинопоиске ↗";
+        } else {
+          movieLogo.src = "";
+          movieLogo.classList.add("hidden");
+          btnText.textContent = "Смотреть на Кинопоиске ↗";
+        }
         kpLink.href = `https://www.kinopoisk.ru/film/${luckyMovie.id}/`;
 
-        // Переключаем видимость карточек
+        // Смена состояния
         placeholderCard.style.display = "none";
         resultCard.classList.remove("empty");
         resultCard.scrollIntoView({ behavior: "smooth" });
@@ -230,12 +230,9 @@ const maxYear = Math.max(...years) || 2026;
 <style>
   :root {
     --bg-color: #0f172a;
-    --card-bg: #1e293b;
-    --accent: #f97316;
-    --accent-hover: #ea580c;
     --text-main: #f8fafc;
     --text-muted: #94a3b8;
-    --border: #334155;
+    --accent: #f97316;
   }
 
   body {
@@ -248,6 +245,7 @@ const maxYear = Math.max(...years) || 2026;
     display: flex;
     justify-content: center;
     padding: 2rem 1rem;
+    overflow-x: hidden;
   }
 
   .app-container {
@@ -271,7 +269,6 @@ const maxYear = Math.max(...years) || 2026;
     margin: 0;
   }
 
-  /* Основная двухколоночная сетка */
   .main-layout {
     display: grid;
     grid-template-columns: 320px 1fr;
@@ -279,244 +276,13 @@ const maxYear = Math.max(...years) || 2026;
     align-items: start;
   }
 
-  /* Левый сайдбар с фильтрами */
-  .sidebar-filters {
-    background-color: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  }
-
-  .sidebar-title {
-    margin: 0 0 0.5rem 0;
-    font-size: 1.25rem;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 0.75rem;
-  }
-
-  .filter-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  label {
-    font-size: 0.875rem;
-    color: var(--text-muted);
-    font-weight: 500;
-  }
-
-  select,
-  .num-input-small,
-  .num-input-year {
-    background-color: var(--bg-color);
-    color: var(--text-main);
-    border: 1px solid var(--border);
-    padding: 0.65rem;
-    border-radius: 0.5rem;
-    font-size: 0.95rem;
-    outline: none;
-    transition: border-color 0.2s;
-  }
-
-  select:focus,
-  input:focus {
-    border-color: var(--accent);
-  }
-
-  /* Тюнинг кастомных инпутов */
-  .range-controls-row {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-
-  input[type="range"] {
-    flex-grow: 1;
-    accent-color: var(--accent);
-    cursor: pointer;
-  }
-
-  .num-input-small {
-    width: 55px;
-    text-align: center;
-  }
-
-  .year-range-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    background: rgba(0, 0, 0, 0.15);
-    padding: 0.75rem;
-    border-radius: 0.5rem;
-  }
-
-  .year-row {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.85rem;
-  }
-
-  .year-row span {
-    width: 20px;
-    color: var(--text-muted);
-  }
-
-  .num-input-year {
-    width: 65px;
-    text-align: center;
-    padding: 0.4rem;
-  }
-
-  /* Правая контентная зона */
   .content-area {
     min-height: 450px;
   }
 
-  .placeholder-card {
-    border: 2px dashed var(--border);
-    border-radius: 1rem;
-    padding: 3rem;
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    min-height: 350px;
-  }
-
-  /* Кнопки */
-  .btn-primary {
-    background-color: var(--accent);
-    color: white;
-    border: none;
-    padding: 0.85rem;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    margin-top: 0.5rem;
-  }
-
-  .btn-primary:hover {
-    background-color: var(--accent-hover);
-  }
-
-  .btn-secondary {
-    display: inline-block;
-    background-color: #334155;
-    color: var(--text-main);
-    text-decoration: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    font-weight: 500;
-    text-align: center;
-    transition: background-color 0.2s;
-    margin-top: auto;
-  }
-
-  .btn-secondary:hover {
-    background-color: #475569;
-  }
-
-  /* Карточка результата */
-  .result-card {
-    background-color: var(--card-bg);
-    border-radius: 1rem;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 2rem;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-  }
-
-  .result-card.empty {
-    display: none;
-  }
-
-  .poster-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    max-height: 450px;
-  }
-
-  .movie-info {
-    padding: 1.5rem 1.5rem 1.5rem 0;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .movie-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .movie-header h2 {
-    margin: 0;
-    font-size: 1.6rem;
-  }
-
-  .rating-badge {
-    background-color: #16a34a;
-    color: white;
-    padding: 0.25rem 0.65rem;
-    border-radius: 0.5rem;
-    font-weight: 700;
-    font-size: 1.1rem;
-  }
-
-  .movie-meta-tags {
-    display: flex;
-    gap: 0.75rem;
-    margin-bottom: 1.25rem;
-    flex-wrap: wrap;
-  }
-
-  .meta-tag {
-    background-color: rgba(255, 255, 255, 0.07);
-    padding: 0.35rem 0.75rem;
-    border-radius: 2rem;
-    font-size: 0.85rem;
-    color: #cbd5e1;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-  }
-
-  .movie-description {
-    line-height: 1.6;
-    color: #cbd5e1;
-    margin: 0 0 1.5rem 0;
-    font-size: 0.95rem;
-  }
-
-  /* Адаптив под мобильные девайсы */
   @media (max-width: 850px) {
     .main-layout {
       grid-template-columns: 1fr;
-    }
-    .result-card {
-      grid-template-columns: 1fr;
-      gap: 0;
-    }
-    .movie-info {
-      padding: 1.5rem;
-    }
-    .poster-wrapper img {
-      max-height: 380px;
-    }
-    .placeholder-card {
-      padding: 2rem;
-      min-height: 150px;
     }
   }
 </style>
