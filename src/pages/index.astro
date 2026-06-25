@@ -128,31 +128,21 @@ const maxYear = Math.max(...years) || 2026;
         const selectedCountryType = countrySelect.value;
         const onlyTop250 = top250Checkbox.checked;
         const minRating = Number(ratingInput.value);
-        const minImdbRating = Number(imdbRatingInput.value);
         const fromYear = Number(yearFromInput.value);
         const toYear = Number(yearToInput.value);
 
         let filtered = localMovies.filter((movie) => {
-          // 1. Фильтр по типу контента (Фильм / Сериал)
           const currentType = movie.type || "movie";
           if (currentType !== selectedType) return false;
 
-          // 2. Рейтинг Кинопоиска
           if ((movie.rating?.kp || 0) < minRating) return false;
 
-          // 3. Рейтинг IMDb
-          if ((movie.rating?.imdb || 0) < minImdbRating) return false;
-
-          // 4. Диапазон годов
           if (movie.year < fromYear || movie.year > toYear) return false;
 
-          // 5. Жанры
           if (selectedGenre && !movie.genres?.includes(selectedGenre)) return false;
 
-          // 6. Флаг Топ-250
           if (onlyTop250 && !movie.top250) return false;
 
-          // 7. Страны
           if (selectedCountryType !== "all") {
             const isRussian = movie.countries?.some((c) => c.toLowerCase() === "россия");
             if (selectedCountryType === "ru" && !isRussian) return false;
