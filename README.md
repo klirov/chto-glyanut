@@ -14,7 +14,7 @@
 
 ## 🚀 Запуск локально
 ```bash
-git clone [https://github.com/klirov/chto-glyanut.git](https://github.com/klirov/chto-glyanut.git)
+git clone https://github.com/klirov/chto-glyanut.git
 cd chto-glyanut
 npm install
 npm run dev
