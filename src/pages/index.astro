@@ -31,9 +31,9 @@ const maxYear = Math.max(...years) || 2026;
     <Notification />
 
     <div class="app-container">
-      <header>
+      <header class="main-header">
         <h1>🎬 Что глянуть?</h1>
-        <p class="subtitle">Идеальный выбор на вечер</p>
+        <p class="subtitle">Идеальный выбор на вечер в один клик</p>
       </header>
 
       <div class="main-layout">
@@ -45,7 +45,6 @@ const maxYear = Math.max(...years) || 2026;
       </div>
     </div>
 
-    {/* Передаем в клиентский скрипт уже отфильтрованную базу */}
     <script define:vars={{ localMovies: baseMoviesWithoutAnime }}>
       // Элементы фильтров
       const spinBtn = document.getElementById("spinBtn");
@@ -56,10 +55,6 @@ const maxYear = Math.max(...years) || 2026;
       // КП Рейтинг
       const ratingSlider = document.getElementById("ratingSlider");
       const ratingInput = document.getElementById("ratingInput");
-
-      // IMDb Рейтинг
-      const imdbRatingSlider = document.getElementById("imdbRatingSlider");
-      const imdbRatingInput = document.getElementById("imdbRatingInput");
 
       // Года
       const yearFromSlider = document.getElementById("yearFromSlider");
@@ -106,6 +101,8 @@ const maxYear = Math.max(...years) || 2026;
 
       // Синхронизация range и number инпутов
       function setupSync(slider, input) {
+        if (!slider || !input) return;
+
         slider.addEventListener("input", () => {
           input.value = slider.value;
         });
@@ -114,13 +111,11 @@ const maxYear = Math.max(...years) || 2026;
         });
       }
       setupSync(ratingSlider, ratingInput);
-      setupSync(imdbRatingSlider, imdbRatingInput);
       setupSync(yearFromSlider, yearFromInput);
       setupSync(yearToSlider, yearToInput);
 
       // Клик по кнопке рандома
       spinBtn.addEventListener("click", () => {
-        // Получаем значение выбранного таба (movie или tv-series)
         const selectedTypeInput = document.querySelector('input[name="contentType"]:checked');
         const selectedType = selectedTypeInput ? selectedTypeInput.value : "movie";
 
@@ -134,13 +129,9 @@ const maxYear = Math.max(...years) || 2026;
         let filtered = localMovies.filter((movie) => {
           const currentType = movie.type || "movie";
           if (currentType !== selectedType) return false;
-
           if ((movie.rating?.kp || 0) < minRating) return false;
-
           if (movie.year < fromYear || movie.year > toYear) return false;
-
           if (selectedGenre && !movie.genres?.includes(selectedGenre)) return false;
-
           if (onlyTop250 && !movie.top250) return false;
 
           if (selectedCountryType !== "all") {
@@ -160,7 +151,6 @@ const maxYear = Math.max(...years) || 2026;
         const randomIndex = Math.floor(Math.random() * filtered.length);
         const luckyMovie = filtered[randomIndex];
 
-        // Текст и заголовки
         movieTitle.textContent = luckyMovie.name;
         if (luckyMovie.alternativeName && luckyMovie.alternativeName !== luckyMovie.name) {
           movieOrigTitle.textContent = luckyMovie.alternativeName;
@@ -169,7 +159,6 @@ const maxYear = Math.max(...years) || 2026;
           movieOrigTitle.style.display = "none";
         }
 
-        // Лейблы рейтингов
         const kpRating = luckyMovie.rating?.kp || 0;
         const imdbRating = luckyMovie.rating?.imdb || 0;
 
@@ -183,7 +172,6 @@ const maxYear = Math.max(...years) || 2026;
           movieRatingImdb.style.display = "none";
         }
 
-        // Топ-250 бадж
         if (luckyMovie.top250) {
           movieTop.textContent = `🔥 Топ #${luckyMovie.top250}`;
           movieTop.style.display = "inline-block";
@@ -191,9 +179,8 @@ const maxYear = Math.max(...years) || 2026;
           movieTop.style.display = "none";
         }
 
-        // Возраст
         if (luckyMovie.ageRating) {
-          movieAge.textContent = luckyMovie.ageRating;
+          movieAge.textContent = luckyMovie.ageRating + "+";
           movieAge.style.display = "inline-block";
         } else {
           movieAge.style.display = "none";
@@ -201,7 +188,6 @@ const maxYear = Math.max(...years) || 2026;
 
         movieYear.textContent = `📅 ${luckyMovie.year} год`;
 
-        // Корректный вывод длительности для сериалов/фильмов
         if (luckyMovie.movieLength) {
           movieLength.textContent =
             selectedType === "movie" ? `⏱️ ${luckyMovie.movieLength} мин.` : `⏱️ ~${luckyMovie.movieLength} мин. серия`;
@@ -212,12 +198,10 @@ const maxYear = Math.max(...years) || 2026;
         movieCountries.textContent = `🌍 ${luckyMovie.countries?.join(", ") || "Неизвестно"}`;
         movieDescription.textContent = luckyMovie.shortDescription || "Описание отсутствует.";
 
-        // Постер
         const posterSrc = luckyMovie.poster?.previewUrl || luckyMovie.poster?.url || "";
         moviePoster.src = posterSrc ? posterSrc + "?t=" + Date.now() : "";
         moviePoster.alt = luckyMovie.name;
 
-        // Кнопка перехода и логотип
         if (luckyMovie.logo) {
           movieLogo.src = luckyMovie.logo;
           movieLogo.classList.remove("hidden");
@@ -229,7 +213,6 @@ const maxYear = Math.max(...years) || 2026;
         }
         kpLink.href = `https://www.kinopoisk.ru/film/${luckyMovie.id}/`;
 
-        // Смена состояния
         placeholderCard.style.display = "none";
         resultCard.classList.remove("empty");
         resultCard.scrollIntoView({ behavior: "smooth" });
@@ -240,60 +223,96 @@ const maxYear = Math.max(...years) || 2026;
 
 <style>
   :root {
-    --bg-color: #0f172a;
+    --bg-color: #0b0f19;
+    --panel-bg: #131c2e;
+    --panel-border: rgba(255, 255, 255, 0.06);
     --text-main: #f8fafc;
-    --text-muted: #94a3b8;
-    --accent: #f97316;
+    --text-muted: #64748b;
+    --text-desc: #94a3b8;
+    --accent: #ff7a00;
+    --accent-hover: #e66e00;
+    --accent-glow: rgba(255, 122, 0, 0.15);
+  }
+
+  * {
+    box-sizing: border-box;
   }
 
   body {
     margin: 0;
     font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
     background-color: var(--bg-color);
+    background-image:
+      radial-gradient(circle at 80% 20%, rgba(255, 122, 0, 0.05) 0%, transparent 40%),
+      radial-gradient(circle at 15% 70%, rgba(30, 41, 59, 0.5) 0%, transparent 50%);
     color: var(--text-main);
     display: flex;
     justify-content: center;
-    padding: 2rem 1rem;
+    padding: 3rem 1.5rem;
     overflow-x: hidden;
+    min-height: 100vh;
+    letter-spacing: -0.01em;
   }
 
   .app-container {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1200px;
+    animation: fadeIn 0.6s ease-out;
   }
 
-  header {
+  .main-header {
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3.5rem;
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: 800;
     margin: 0 0 0.5rem 0;
     color: var(--accent);
+    -webkit-background-clip: text;
+    letter-spacing: -0.03em;
   }
 
   .subtitle {
     color: var(--text-muted);
+    font-size: 1.1rem;
     margin: 0;
+    font-weight: 400;
   }
 
   .main-layout {
     display: grid;
-    grid-template-columns: 320px 1fr;
-    gap: 2rem;
-    align-items: start;
+    grid-template-columns: 340px 1fr;
+    gap: 2.5rem;
+    align-items: center;
   }
 
   .content-area {
-    min-height: 450px;
+    min-height: 500px;
   }
 
-  @media (max-width: 850px) {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 950px) {
+    body {
+      padding: 1.5rem 1rem;
+    }
     .main-layout {
       grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    h1 {
+      font-size: 2.2rem;
     }
   }
 </style>
