@@ -4,10 +4,8 @@ import FilterSidebar from "../components/FilterSidebar.astro";
 import MovieCard from "../components/MovieCard.astro";
 import Notification from "../components/Notification.astro";
 
-// 1. Полностью исключаем аниме из базы данных на бэкенде (Astro)
 const baseMoviesWithoutAnime = localMovies.filter((movie) => !movie.genres?.some((g) => g.toLowerCase() === "аниме"));
 
-// Жанры и года собираем уже из чистой базы без аниме
 const allGenres = [...new Set(baseMoviesWithoutAnime.flatMap((m) => m.genres || []))].sort();
 
 const years = baseMoviesWithoutAnime.map((m) => m.year).filter(Boolean);
@@ -136,7 +134,8 @@ const maxYear = Math.max(...years) || 2026;
 
         let filtered = localMovies.filter((movie) => {
           // 1. Фильтр по типу контента (Фильм / Сериал)
-          if (movie.type !== selectedType) return false;
+          const currentType = movie.type || "movie";
+          if (currentType !== selectedType) return false;
 
           // 2. Рейтинг Кинопоиска
           if ((movie.rating?.kp || 0) < minRating) return false;
