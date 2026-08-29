@@ -1,5 +1,67 @@
 [
   {
+    "id": 13442502,
+    "name": "Сергей Орлов. Розовый леопард",
+    "alternativeName": "Сергей Орлов. Розовый леопард",
+    "movieLength": 60,
+    "shortDescription": "Ограбление по-американски, худший подарок и первый секс. Новый стендап Сергея Орлова — дикий и откровенный",
+    "genres": [
+      "комедия",
+      "концерт"
+    ],
+    "countries": [
+      "Россия"
+    ],
+    "type": "movie",
+    "rating": {
+      "kp": 8.1,
+      "imdb": 0
+    },
+    "votes": {
+      "kp": 117557,
+      "imdb": 0
+    },
+    "poster": {
+      "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/10893610/2eb71f82-5b73-487e-8b3e-bc273a2f5fbf/600x900",
+      "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/10893610/2eb71f82-5b73-487e-8b3e-bc273a2f5fbf/300x450"
+    },
+    "logo": null,
+    "year": 2026,
+    "ageRating": "18+",
+    "top250": null
+  },
+  {
+    "id": 13757878,
+    "name": "Как понять «Закулисье реальности»",
+    "alternativeName": "Как понять «Закулисье реальности»",
+    "movieLength": 10,
+    "shortDescription": "О чём на самом деле нашумевший хоррор и как сняты лиминальные пространства? Разбираемся в мифологии крипипасты",
+    "genres": [
+      "короткометражка",
+      "документальный"
+    ],
+    "countries": [
+      "Россия"
+    ],
+    "type": "movie",
+    "rating": {
+      "kp": 7.2,
+      "imdb": 0
+    },
+    "votes": {
+      "kp": 5546,
+      "imdb": 0
+    },
+    "poster": {
+      "url": "https://avatars.mds.yandex.net/get-ott/200035/2a000001a0382707fb1cb16e807eb068f4c1/600x900",
+      "previewUrl": "https://avatars.mds.yandex.net/get-ott/200035/2a000001a0382707fb1cb16e807eb068f4c1/300x450"
+    },
+    "logo": null,
+    "year": 2026,
+    "ageRating": "18+",
+    "top250": null
+  },
+  {
     "id": 13230651,
     "name": "Назар Аудар 15 лет",
     "alternativeName": "Назар Аудар 15 жыл",
@@ -454,7 +516,7 @@
       "imdb": 6
     },
     "votes": {
-      "kp": 11142,
+      "kp": 11160,
       "imdb": 39
     },
     "poster": {
@@ -550,7 +612,7 @@
       "imdb": 7.2
     },
     "votes": {
-      "kp": 32984,
+      "kp": 33044,
       "imdb": 28
     },
     "poster": {
@@ -644,7 +706,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 9047,
+      "kp": 9409,
       "imdb": 0
     },
     "poster": {
@@ -924,7 +986,7 @@
       "imdb": 8.4
     },
     "votes": {
-      "kp": 47276,
+      "kp": 47310,
       "imdb": 104
     },
     "poster": {
@@ -1203,7 +1265,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 53613,
+      "kp": 53663,
       "imdb": 0
     },
     "poster": {
@@ -1416,7 +1478,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 61002,
+      "kp": 61472,
       "imdb": 0
     },
     "poster": {
@@ -1540,7 +1602,7 @@
       "imdb": 5.1
     },
     "votes": {
-      "kp": 8567,
+      "kp": 8602,
       "imdb": 536
     },
     "poster": {
@@ -1604,7 +1666,7 @@
       "imdb": 5.3
     },
     "votes": {
-      "kp": 31590,
+      "kp": 31630,
       "imdb": 281
     },
     "poster": {
@@ -1828,7 +1890,7 @@
       "imdb": 8.4
     },
     "votes": {
-      "kp": 5371,
+      "kp": 5380,
       "imdb": 3200
     },
     "poster": {
@@ -2269,7 +2331,7 @@
       "imdb": 6.8
     },
     "votes": {
-      "kp": 11468,
+      "kp": 11469,
       "imdb": 3700
     },
     "poster": {
@@ -2459,7 +2521,7 @@
       "imdb": 5.3
     },
     "votes": {
-      "kp": 82808,
+      "kp": 82814,
       "imdb": 532
     },
     "poster": {
@@ -3136,7 +3198,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 39144,
+      "kp": 39146,
       "imdb": 0
     },
     "poster": {
@@ -3325,7 +3387,7 @@
       "imdb": 6.7
     },
     "votes": {
-      "kp": 9647,
+      "kp": 9702,
       "imdb": 81000
     },
     "poster": {
@@ -4248,7 +4310,7 @@
       "imdb": 5.9
     },
     "votes": {
-      "kp": 53267,
+      "kp": 53274,
       "imdb": 2100
     },
     "poster": {
@@ -4592,7 +4654,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 6306,
+      "kp": 6310,
       "imdb": 0
     },
     "poster": {
@@ -4876,7 +4938,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 31849,
+      "kp": 31854,
       "imdb": 0
     },
     "poster": {
@@ -6809,7 +6871,7 @@
       "imdb": 5.5
     },
     "votes": {
-      "kp": 108366,
+      "kp": 108426,
       "imdb": 46000
     },
     "poster": {
@@ -7288,7 +7350,7 @@
       "imdb": 7
     },
     "votes": {
-      "kp": 107690,
+      "kp": 107710,
       "imdb": 297000
     },
     "poster": {
@@ -7603,7 +7665,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 265187,
+      "kp": 265271,
       "imdb": 0
     },
     "poster": {
@@ -7835,71 +7897,6 @@
     "top250": null
   },
   {
-    "id": 1309596,
-    "name": "Никто",
-    "alternativeName": "Nobody",
-    "movieLength": 92,
-    "shortDescription": "Задетый за живое обыватель превращается в крутого защитника семьи. Голливудский дебют Ильи Найшуллера",
-    "genres": [
-      "боевик",
-      "триллер",
-      "криминал"
-    ],
-    "countries": [
-      "США",
-      "Япония"
-    ],
-    "type": "movie",
-    "rating": {
-      "kp": 7.4,
-      "imdb": 7.4
-    },
-    "votes": {
-      "kp": 467371,
-      "imdb": 388000
-    },
-    "poster": {
-      "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/a74d86f6-a78a-46dd-8c1e-65cd79984902/600x900",
-      "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/a74d86f6-a78a-46dd-8c1e-65cd79984902/300x450"
-    },
-    "logo": "https://image.tmdb.org/t/p/original/nByHa98b6sLBBqmJIvuDRrhW2Bg.png",
-    "year": 2021,
-    "ageRating": "18+",
-    "top250": null
-  },
-  {
-    "id": 1309621,
-    "name": "Свинья",
-    "alternativeName": "Pig",
-    "movieLength": 92,
-    "shortDescription": "Отшельник должен вернуть своего друга и кормилицу — трюфельную свинью. Драматичный триллер с Николасом Кейджем",
-    "genres": [
-      "драма",
-      "триллер"
-    ],
-    "countries": [
-      "США",
-      "Великобритания"
-    ],
-    "type": "movie",
-    "rating": {
-      "kp": 6.4,
-      "imdb": 6.9
-    },
-    "votes": {
-      "kp": 36257,
-      "imdb": 104000
-    },
-    "poster": {
-      "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/8bdb8bb0-ea35-4e03-ab8b-1c32e985acfb/600x900",
-      "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/8bdb8bb0-ea35-4e03-ab8b-1c32e985acfb/300x450"
-    },
-    "logo": "https://image.tmdb.org/t/p/original/9vV9pIcanWgWB7wWNtOK7OMXUf9.png",
-    "year": 2021,
-    "ageRating": "18+",
-    "top250": null
-  },
-  {
     "id": 13250125,
     "name": "Пока смерть не разлучит нас",
     "alternativeName": "Tills döden skiljer oss",
@@ -7920,7 +7917,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 5018,
+      "kp": 5303,
       "imdb": 0
     },
     "poster": {
@@ -8078,7 +8075,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 10299,
+      "kp": 11411,
       "imdb": 0
     },
     "poster": {
@@ -8088,6 +8085,39 @@
     "logo": null,
     "year": 2026,
     "ageRating": "18+",
+    "top250": null
+  },
+  {
+    "id": 12844456,
+    "name": "Чемпионат мира по футболу 2026",
+    "alternativeName": "2026 FIFA World Cup",
+    "movieLength": 90,
+    "shortDescription": "Шедевры Месси, дубль Беллингема и магия Мерино. Наслаждаемся голами прошедшего мундиаля",
+    "genres": [
+      "спорт",
+      "реальное ТВ"
+    ],
+    "countries": [
+      "Канада",
+      "Мексика",
+      "США"
+    ],
+    "type": "tv-series",
+    "rating": {
+      "kp": 8.1,
+      "imdb": 7.4
+    },
+    "votes": {
+      "kp": 5003,
+      "imdb": 805
+    },
+    "poster": {
+      "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/4483445/92c2abf1-996f-4ee2-b747-697a63af9fbd/600x900",
+      "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/4483445/92c2abf1-996f-4ee2-b747-697a63af9fbd/300x450"
+    },
+    "logo": null,
+    "year": 2026,
+    "ageRating": "6+",
     "top250": null
   },
   {
@@ -8171,7 +8201,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 299779,
+      "kp": 300435,
       "imdb": 0
     },
     "poster": {
@@ -8202,7 +8232,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 36367,
+      "kp": 36515,
       "imdb": 0
     },
     "poster": {
@@ -8420,7 +8450,7 @@
       "imdb": 8.2
     },
     "votes": {
-      "kp": 55358,
+      "kp": 55448,
       "imdb": 6732
     },
     "poster": {
@@ -8452,7 +8482,7 @@
       "imdb": 6.3
     },
     "votes": {
-      "kp": 6443,
+      "kp": 6465,
       "imdb": 5633
     },
     "poster": {
@@ -8517,7 +8547,7 @@
       "imdb": 8.2
     },
     "votes": {
-      "kp": 6894,
+      "kp": 6911,
       "imdb": 1379
     },
     "poster": {
@@ -9011,7 +9041,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 49358,
+      "kp": 50474,
       "imdb": 0
     },
     "poster": {
@@ -9042,7 +9072,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 10847,
+      "kp": 10853,
       "imdb": 0
     },
     "poster": {
@@ -9074,7 +9104,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 54832,
+      "kp": 54889,
       "imdb": 0
     },
     "poster": {
@@ -9255,7 +9285,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 16196,
+      "kp": 16201,
       "imdb": 0
     },
     "poster": {
@@ -9880,7 +9910,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 184723,
+      "kp": 184766,
       "imdb": 0
     },
     "poster": {
@@ -10163,7 +10193,7 @@
       "imdb": 5.8
     },
     "votes": {
-      "kp": 11395,
+      "kp": 11398,
       "imdb": 5400
     },
     "poster": {
@@ -10291,7 +10321,7 @@
       "imdb": 6.6
     },
     "votes": {
-      "kp": 832124,
+      "kp": 832371,
       "imdb": 2000
     },
     "poster": {
@@ -10321,7 +10351,7 @@
       "imdb": 6.2
     },
     "votes": {
-      "kp": 1454306,
+      "kp": 1454895,
       "imdb": 648
     },
     "poster": {
@@ -10752,7 +10782,7 @@
       "imdb": 6.6
     },
     "votes": {
-      "kp": 20563,
+      "kp": 20566,
       "imdb": 33000
     },
     "poster": {
@@ -10877,7 +10907,7 @@
       "imdb": 7.9
     },
     "votes": {
-      "kp": 160800,
+      "kp": 160834,
       "imdb": 48000
     },
     "poster": {
@@ -11000,7 +11030,7 @@
       "imdb": 6
     },
     "votes": {
-      "kp": 30264,
+      "kp": 30265,
       "imdb": 49
     },
     "poster": {
@@ -11282,7 +11312,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 78378,
+      "kp": 78450,
       "imdb": 0
     },
     "poster": {
@@ -12781,7 +12811,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 9722,
+      "kp": 9723,
       "imdb": 0
     },
     "poster": {
@@ -13089,7 +13119,7 @@
       "imdb": 7.5
     },
     "votes": {
-      "kp": 6574,
+      "kp": 6580,
       "imdb": 14000
     },
     "poster": {
@@ -13151,7 +13181,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 8172,
+      "kp": 8173,
       "imdb": 0
     },
     "poster": {
@@ -13213,7 +13243,7 @@
       "imdb": 6.7
     },
     "votes": {
-      "kp": 21709,
+      "kp": 21712,
       "imdb": 6000
     },
     "poster": {
@@ -13401,7 +13431,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 89255,
+      "kp": 89284,
       "imdb": 0
     },
     "poster": {
@@ -13437,7 +13467,7 @@
       "imdb": 7.6
     },
     "votes": {
-      "kp": 8880,
+      "kp": 8882,
       "imdb": 32000
     },
     "poster": {
@@ -14378,7 +14408,7 @@
       "imdb": 7.7
     },
     "votes": {
-      "kp": 108489,
+      "kp": 108508,
       "imdb": 114000
     },
     "poster": {
@@ -15604,39 +15634,6 @@
     "logo": null,
     "year": 2019,
     "ageRating": "12+",
-    "top250": null
-  },
-  {
-    "id": 1311460,
-    "name": "Беспорядок после тебя",
-    "alternativeName": "El desorden que dejas",
-    "movieLength": 56,
-    "shortDescription": "Учительница приходит работать в старшие классы, однако недавно там произошедшая загадочная смерть не дает ей покоя. Женщина начинает бояться за собственную жизнь.",
-    "genres": [
-      "триллер",
-      "драма",
-      "криминал",
-      "детектив"
-    ],
-    "countries": [
-      "Испания"
-    ],
-    "type": "tv-series",
-    "rating": {
-      "kp": 6.7,
-      "imdb": 6.8
-    },
-    "votes": {
-      "kp": 11691,
-      "imdb": 12000
-    },
-    "poster": {
-      "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/bd30864a-b1ce-46c9-95d3-68fd381070ee/600x900",
-      "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/bd30864a-b1ce-46c9-95d3-68fd381070ee/300x450"
-    },
-    "logo": "https://image.tmdb.org/t/p/original/uebExAVP5AyJgA01LgnVri1uf97.png",
-    "year": 2020,
-    "ageRating": null,
     "top250": null
   }
 ]
