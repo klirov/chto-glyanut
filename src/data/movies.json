@@ -18,7 +18,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 6547,
+      "kp": 7029,
       "imdb": 0
     },
     "poster": {
@@ -45,11 +45,11 @@
     ],
     "type": "movie",
     "rating": {
-      "kp": 7.5,
+      "kp": 7.6,
       "imdb": 0
     },
     "votes": {
-      "kp": 7852,
+      "kp": 7890,
       "imdb": 0
     },
     "poster": {
@@ -80,7 +80,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 8696,
+      "kp": 8775,
       "imdb": 0
     },
     "poster": {
@@ -111,7 +111,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 92192,
+      "kp": 92581,
       "imdb": 0
     },
     "poster": {
@@ -173,7 +173,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 21539,
+      "kp": 21655,
       "imdb": 0
     },
     "poster": {
@@ -203,7 +203,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 28422,
+      "kp": 28644,
       "imdb": 0
     },
     "poster": {
@@ -265,7 +265,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 47908,
+      "kp": 48188,
       "imdb": 0
     },
     "poster": {
@@ -295,7 +295,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 32389,
+      "kp": 38290,
       "imdb": 0
     },
     "poster": {
@@ -328,8 +328,8 @@
       "imdb": 5
     },
     "votes": {
-      "kp": 24437,
-      "imdb": 799
+      "kp": 24573,
+      "imdb": 809
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10768063/414f3568-e7fb-482d-b224-f09ab4ce858c/600x900",
@@ -359,7 +359,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 114848,
+      "kp": 116999,
       "imdb": 0
     },
     "poster": {
@@ -389,7 +389,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 98600,
+      "kp": 99308,
       "imdb": 0
     },
     "poster": {
@@ -399,6 +399,40 @@
     "logo": null,
     "year": 2026,
     "ageRating": "16+",
+    "top250": null
+  },
+  {
+    "id": 13421214,
+    "name": "Тенцинг",
+    "alternativeName": "Tenzing",
+    "movieLength": 128,
+    "shortDescription": "Бхотия Тенцинг Норгей — опытный и одарённый альпинист, который вырос в Гималаях и с детства мечтал покорить Джомолунгму. В 1953 году, после неудачной попытки с швейцарской группой, он заручается поддержкой секретаря британской экспедиции на Эверест Джилл Хендерсон. Вместе они убеждают главу экспедиции полковника Джона Ханта включить Норгея в состав команды в качестве полноценного участника, а не просто носильщика и подручного. Так Тенцинг получает ещё один шанс достичь вершины Джомолунгмы.",
+    "genres": [
+      "биография",
+      "драма",
+      "приключения"
+    ],
+    "countries": [
+      "Великобритания",
+      "Австралия",
+      "США"
+    ],
+    "type": "movie",
+    "rating": {
+      "kp": 7.3,
+      "imdb": 7.4
+    },
+    "votes": {
+      "kp": 5053,
+      "imdb": 19650
+    },
+    "poster": {
+      "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/4486362/d907e586-d607-4108-ae6f-ff60bf72e5ed/600x900",
+      "previewUrl": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/4486362/d907e586-d607-4108-ae6f-ff60bf72e5ed/300x450"
+    },
+    "logo": null,
+    "year": 2026,
+    "ageRating": null,
     "top250": null
   },
   {
@@ -421,7 +455,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 9333,
+      "kp": 9417,
       "imdb": 0
     },
     "poster": {
@@ -483,7 +517,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 13136,
+      "kp": 13190,
       "imdb": 0
     },
     "poster": {
@@ -544,7 +578,7 @@
       "imdb": 3.7
     },
     "votes": {
-      "kp": 26817,
+      "kp": 27152,
       "imdb": 907
     },
     "poster": {
@@ -579,7 +613,7 @@
       "imdb": 4.9
     },
     "votes": {
-      "kp": 13903,
+      "kp": 13969,
       "imdb": 389
     },
     "poster": {
@@ -610,7 +644,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 6487,
+      "kp": 6503,
       "imdb": 0
     },
     "poster": {
@@ -641,7 +675,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 7583,
+      "kp": 7607,
       "imdb": 0
     },
     "poster": {
@@ -672,7 +706,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 55438,
+      "kp": 55868,
       "imdb": 0
     },
     "poster": {
@@ -703,7 +737,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 14459,
+      "kp": 14495,
       "imdb": 0
     },
     "poster": {
@@ -734,8 +768,8 @@
       "imdb": 7.2
     },
     "votes": {
-      "kp": 18253,
-      "imdb": 60465
+      "kp": 18308,
+      "imdb": 60661
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10853012/768b1edd-e2f4-449b-b38d-25a97390e669/600x900",
@@ -766,7 +800,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 20810,
+      "kp": 26743,
       "imdb": 0
     },
     "poster": {
@@ -828,7 +862,7 @@
       "imdb": 6.6
     },
     "votes": {
-      "kp": 8928,
+      "kp": 8993,
       "imdb": 129
     },
     "poster": {
@@ -838,6 +872,38 @@
     "logo": null,
     "year": 2026,
     "ageRating": "6+",
+    "top250": null
+  },
+  {
+    "id": 11675884,
+    "name": "Мальчик и лис",
+    "alternativeName": "L'enfant du désert",
+    "movieLength": 92,
+    "shortDescription": "Маленький мальчик остаётся один в пустыне и учится выживать. Семейное кино о неожиданном друге",
+    "genres": [
+      "приключения",
+      "семейный"
+    ],
+    "countries": [
+      "Франция",
+      "Бельгия"
+    ],
+    "type": "movie",
+    "rating": {
+      "kp": 7.9,
+      "imdb": 6.4
+    },
+    "votes": {
+      "kp": 5046,
+      "imdb": 435
+    },
+    "poster": {
+      "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10671298/4925837e-66f3-4682-a675-fe6c07502019/600x900",
+      "previewUrl": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10671298/4925837e-66f3-4682-a675-fe6c07502019/300x450"
+    },
+    "logo": null,
+    "year": 2026,
+    "ageRating": "12+",
     "top250": null
   },
   {
@@ -859,7 +925,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 31790,
+      "kp": 31961,
       "imdb": 0
     },
     "poster": {
@@ -951,8 +1017,8 @@
       "imdb": 7.6
     },
     "votes": {
-      "kp": 10858,
-      "imdb": 56924
+      "kp": 10880,
+      "imdb": 57009
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10900341/856fe75d-da78-47a7-b2c8-c00dff18883d/600x900",
@@ -981,7 +1047,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 8958,
+      "kp": 8986,
       "imdb": 0
     },
     "poster": {
@@ -1012,7 +1078,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 71463,
+      "kp": 71629,
       "imdb": 0
     },
     "poster": {
@@ -1043,8 +1109,8 @@
       "imdb": 5.2
     },
     "votes": {
-      "kp": 42896,
-      "imdb": 741
+      "kp": 43437,
+      "imdb": 746
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10671298/7c6861cc-4483-4a03-9dd2-c8fdb0db2afc/600x900",
@@ -1075,7 +1141,7 @@
       "imdb": 6.5
     },
     "votes": {
-      "kp": 11260,
+      "kp": 11292,
       "imdb": 143
     },
     "poster": {
@@ -1108,7 +1174,7 @@
       "imdb": 6
     },
     "votes": {
-      "kp": 12742,
+      "kp": 12797,
       "imdb": 39
     },
     "poster": {
@@ -1141,7 +1207,7 @@
       "imdb": 6.5
     },
     "votes": {
-      "kp": 12978,
+      "kp": 13026,
       "imdb": 45
     },
     "poster": {
@@ -1204,7 +1270,7 @@
       "imdb": 7.2
     },
     "votes": {
-      "kp": 37929,
+      "kp": 38064,
       "imdb": 28
     },
     "poster": {
@@ -1235,7 +1301,7 @@
       "imdb": 6.5
     },
     "votes": {
-      "kp": 18025,
+      "kp": 18096,
       "imdb": 40
     },
     "poster": {
@@ -1271,8 +1337,8 @@
       "imdb": 5.9
     },
     "votes": {
-      "kp": 15915,
-      "imdb": 1762
+      "kp": 15986,
+      "imdb": 1773
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10900341/33ca9dfb-c14e-42cd-bd23-03900922f9d7/600x900",
@@ -1332,7 +1398,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 14172,
+      "kp": 14215,
       "imdb": 0
     },
     "poster": {
@@ -1362,7 +1428,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 16354,
+      "kp": 17137,
       "imdb": 0
     },
     "poster": {
@@ -1426,7 +1492,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 74845,
+      "kp": 75074,
       "imdb": 0
     },
     "poster": {
@@ -1460,7 +1526,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 5545,
+      "kp": 5585,
       "imdb": 0
     },
     "poster": {
@@ -1521,7 +1587,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 95754,
+      "kp": 96415,
       "imdb": 0
     },
     "poster": {
@@ -1548,11 +1614,11 @@
     ],
     "type": "movie",
     "rating": {
-      "kp": 7.3,
+      "kp": 7.2,
       "imdb": 0
     },
     "votes": {
-      "kp": 7990,
+      "kp": 8061,
       "imdb": 0
     },
     "poster": {
@@ -1582,7 +1648,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 13848,
+      "kp": 13979,
       "imdb": 0
     },
     "poster": {
@@ -1612,7 +1678,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 11218,
+      "kp": 11219,
       "imdb": 0
     },
     "poster": {
@@ -1642,7 +1708,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 20450,
+      "kp": 20496,
       "imdb": 0
     },
     "poster": {
@@ -1672,7 +1738,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 143997,
+      "kp": 144147,
       "imdb": 0
     },
     "poster": {
@@ -1702,7 +1768,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 100113,
+      "kp": 100198,
       "imdb": 0
     },
     "poster": {
@@ -1730,11 +1796,11 @@
     "type": "movie",
     "rating": {
       "kp": 7.8,
-      "imdb": 8.9
+      "imdb": 6.2
     },
     "votes": {
-      "kp": 63205,
-      "imdb": 20
+      "kp": 63516,
+      "imdb": 74
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/4716873/14c9ad49-d9fa-491d-a47b-d1c7d00eb985/600x900",
@@ -1764,7 +1830,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 70099,
+      "kp": 70219,
       "imdb": 0
     },
     "poster": {
@@ -1799,7 +1865,7 @@
       "imdb": 6.3
     },
     "votes": {
-      "kp": 56291,
+      "kp": 56601,
       "imdb": 442
     },
     "poster": {
@@ -1893,8 +1959,8 @@
       "imdb": 6.6
     },
     "votes": {
-      "kp": 9221,
-      "imdb": 1057
+      "kp": 9427,
+      "imdb": 1058
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10671298/105baf92-e112-4091-be89-1eb08bac09ae/600x900",
@@ -1925,7 +1991,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 93721,
+      "kp": 94049,
       "imdb": 0
     },
     "poster": {
@@ -1956,7 +2022,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 12016,
+      "kp": 12059,
       "imdb": 0
     },
     "poster": {
@@ -1987,7 +2053,7 @@
       "imdb": 6.3
     },
     "votes": {
-      "kp": 25364,
+      "kp": 25538,
       "imdb": 23
     },
     "poster": {
@@ -2017,7 +2083,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 96046,
+      "kp": 96161,
       "imdb": 0
     },
     "poster": {
@@ -2049,7 +2115,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 7431,
+      "kp": 7455,
       "imdb": 0
     },
     "poster": {
@@ -2110,7 +2176,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 89715,
+      "kp": 89858,
       "imdb": 0
     },
     "poster": {
@@ -2141,7 +2207,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 58307,
+      "kp": 58348,
       "imdb": 0
     },
     "poster": {
@@ -2171,7 +2237,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 9710,
+      "kp": 9727,
       "imdb": 0
     },
     "poster": {
@@ -2232,7 +2298,7 @@
       "imdb": 8
     },
     "votes": {
-      "kp": 14785,
+      "kp": 14823,
       "imdb": 7
     },
     "poster": {
@@ -2263,7 +2329,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 10582,
+      "kp": 10609,
       "imdb": 0
     },
     "poster": {
@@ -2297,8 +2363,8 @@
       "imdb": 7.4
     },
     "votes": {
-      "kp": 8891,
-      "imdb": 9176
+      "kp": 9178,
+      "imdb": 9335
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10703859/98bd0126-766c-4c69-a43d-4d782ee65a44/600x900",
@@ -2357,7 +2423,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 37192,
+      "kp": 37495,
       "imdb": 0
     },
     "poster": {
@@ -2388,7 +2454,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 86193,
+      "kp": 86384,
       "imdb": 0
     },
     "poster": {
@@ -2419,7 +2485,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 107450,
+      "kp": 107820,
       "imdb": 0
     },
     "poster": {
@@ -2451,7 +2517,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 76781,
+      "kp": 76889,
       "imdb": 0
     },
     "poster": {
@@ -2481,7 +2547,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 98674,
+      "kp": 98824,
       "imdb": 0
     },
     "poster": {
@@ -2512,7 +2578,7 @@
       "imdb": 5.1
     },
     "votes": {
-      "kp": 10699,
+      "kp": 10729,
       "imdb": 536
     },
     "poster": {
@@ -2542,7 +2608,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 44301,
+      "kp": 44427,
       "imdb": 0
     },
     "poster": {
@@ -2573,7 +2639,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 14863,
+      "kp": 14907,
       "imdb": 0
     },
     "poster": {
@@ -2606,7 +2672,7 @@
       "imdb": 5.3
     },
     "votes": {
-      "kp": 37040,
+      "kp": 37122,
       "imdb": 281
     },
     "poster": {
@@ -2638,7 +2704,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 5990,
+      "kp": 6032,
       "imdb": 0
     },
     "poster": {
@@ -2671,7 +2737,7 @@
       "imdb": 7.2
     },
     "votes": {
-      "kp": 22708,
+      "kp": 22801,
       "imdb": 312
     },
     "poster": {
@@ -2734,7 +2800,7 @@
       "imdb": 8.3
     },
     "votes": {
-      "kp": 7120,
+      "kp": 7127,
       "imdb": 1400
     },
     "poster": {
@@ -2765,8 +2831,8 @@
       "imdb": 4.3
     },
     "votes": {
-      "kp": 28705,
-      "imdb": 6509
+      "kp": 28720,
+      "imdb": 6518
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/4486454/def96256-8bee-4a3e-b8be-63850dc34e8a/600x900",
@@ -2798,7 +2864,7 @@
       "imdb": 8
     },
     "votes": {
-      "kp": 75583,
+      "kp": 75592,
       "imdb": 68000
     },
     "poster": {
@@ -2830,7 +2896,7 @@
       "imdb": 8.4
     },
     "votes": {
-      "kp": 5422,
+      "kp": 5424,
       "imdb": 3200
     },
     "poster": {
@@ -2952,11 +3018,11 @@
     ],
     "type": "movie",
     "rating": {
-      "kp": 7.3,
+      "kp": 7.2,
       "imdb": 0
     },
     "votes": {
-      "kp": 80025,
+      "kp": 80313,
       "imdb": 0
     },
     "poster": {
@@ -2988,8 +3054,8 @@
       "imdb": 5.6
     },
     "votes": {
-      "kp": 51341,
-      "imdb": 5274
+      "kp": 51946,
+      "imdb": 5275
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10953618/cde2385d-6174-435e-b9f2-34ef7a9de60d/600x900",
@@ -3018,7 +3084,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 6071,
+      "kp": 6075,
       "imdb": 0
     },
     "poster": {
@@ -3114,7 +3180,7 @@
       "imdb": 6.9
     },
     "votes": {
-      "kp": 5381,
+      "kp": 5384,
       "imdb": 5000
     },
     "poster": {
@@ -3148,7 +3214,7 @@
       "imdb": 5.6
     },
     "votes": {
-      "kp": 17969,
+      "kp": 17971,
       "imdb": 36000
     },
     "poster": {
@@ -3242,7 +3308,7 @@
       "imdb": 7.8
     },
     "votes": {
-      "kp": 36367,
+      "kp": 36373,
       "imdb": 29000
     },
     "poster": {
@@ -3306,7 +3372,7 @@
       "imdb": 6.1
     },
     "votes": {
-      "kp": 5063,
+      "kp": 5081,
       "imdb": 27
     },
     "poster": {
@@ -3338,7 +3404,7 @@
       "imdb": 6.8
     },
     "votes": {
-      "kp": 11832,
+      "kp": 11840,
       "imdb": 3700
     },
     "poster": {
@@ -3370,7 +3436,7 @@
       "imdb": 6.8
     },
     "votes": {
-      "kp": 12138,
+      "kp": 12140,
       "imdb": 55000
     },
     "poster": {
@@ -3433,7 +3499,7 @@
       "imdb": 5.1
     },
     "votes": {
-      "kp": 6005,
+      "kp": 6007,
       "imdb": 608
     },
     "poster": {
@@ -3497,7 +3563,7 @@
       "imdb": 6.5
     },
     "votes": {
-      "kp": 24800,
+      "kp": 24811,
       "imdb": 1200
     },
     "poster": {
@@ -3528,7 +3594,7 @@
       "imdb": 5.3
     },
     "votes": {
-      "kp": 84661,
+      "kp": 84689,
       "imdb": 532
     },
     "poster": {
@@ -3565,7 +3631,7 @@
       "imdb": 6.6
     },
     "votes": {
-      "kp": 63805,
+      "kp": 63842,
       "imdb": 3800
     },
     "poster": {
@@ -3598,7 +3664,7 @@
       "imdb": 6.5
     },
     "votes": {
-      "kp": 16105,
+      "kp": 16106,
       "imdb": 2100
     },
     "poster": {
@@ -3660,8 +3726,8 @@
       "imdb": 6.5
     },
     "votes": {
-      "kp": 627854,
-      "imdb": 53614
+      "kp": 627980,
+      "imdb": 53624
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/1898899/c456643c-84fc-4b24-a288-668e3afa95fc/600x900",
@@ -3691,7 +3757,7 @@
       "imdb": 6.8
     },
     "votes": {
-      "kp": 7087,
+      "kp": 7088,
       "imdb": 10000
     },
     "poster": {
@@ -3755,7 +3821,7 @@
       "imdb": 5.8
     },
     "votes": {
-      "kp": 122571,
+      "kp": 122582,
       "imdb": 42000
     },
     "poster": {
@@ -3785,7 +3851,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 6330,
+      "kp": 6329,
       "imdb": 0
     },
     "poster": {
@@ -3845,7 +3911,7 @@
       "imdb": 4.9
     },
     "votes": {
-      "kp": 6801,
+      "kp": 6807,
       "imdb": 289
     },
     "poster": {
@@ -3876,7 +3942,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 78609,
+      "kp": 78642,
       "imdb": 0
     },
     "poster": {
@@ -3907,7 +3973,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 48398,
+      "kp": 48401,
       "imdb": 0
     },
     "poster": {
@@ -3973,7 +4039,7 @@
       "imdb": 6.2
     },
     "votes": {
-      "kp": 23965,
+      "kp": 23970,
       "imdb": 13125
     },
     "poster": {
@@ -4006,8 +4072,8 @@
       "imdb": 6.8
     },
     "votes": {
-      "kp": 19967,
-      "imdb": 108338
+      "kp": 19973,
+      "imdb": 108377
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/1898899/387970be-7878-48dd-8aa8-c3b59cecf419/600x900",
@@ -4038,7 +4104,7 @@
       "imdb": 6.2
     },
     "votes": {
-      "kp": 7224,
+      "kp": 7226,
       "imdb": 667
     },
     "poster": {
@@ -4069,7 +4135,7 @@
       "imdb": 4.7
     },
     "votes": {
-      "kp": 18741,
+      "kp": 18751,
       "imdb": 858
     },
     "poster": {
@@ -4109,8 +4175,8 @@
       "imdb": 7.2
     },
     "votes": {
-      "kp": 433907,
-      "imdb": 222292
+      "kp": 433971,
+      "imdb": 222311
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/4774061/947395dd-db55-4eb2-a90e-4a25a5b66287/600x900",
@@ -4141,7 +4207,7 @@
       "imdb": 4.6
     },
     "votes": {
-      "kp": 81992,
+      "kp": 82031,
       "imdb": 13000
     },
     "poster": {
@@ -4205,7 +4271,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 39575,
+      "kp": 39586,
       "imdb": 0
     },
     "poster": {
@@ -4236,7 +4302,7 @@
       "imdb": 6.6
     },
     "votes": {
-      "kp": 115491,
+      "kp": 115492,
       "imdb": 2300
     },
     "poster": {
@@ -4269,7 +4335,7 @@
       "imdb": 6
     },
     "votes": {
-      "kp": 38724,
+      "kp": 38742,
       "imdb": 29000
     },
     "poster": {
@@ -4301,7 +4367,7 @@
       "imdb": 5.5
     },
     "votes": {
-      "kp": 5716,
+      "kp": 5719,
       "imdb": 492
     },
     "poster": {
@@ -4331,7 +4397,7 @@
       "imdb": 6.1
     },
     "votes": {
-      "kp": 26416,
+      "kp": 26420,
       "imdb": 19000
     },
     "poster": {
@@ -4361,7 +4427,7 @@
       "imdb": 6.1
     },
     "votes": {
-      "kp": 26870,
+      "kp": 26876,
       "imdb": 1400
     },
     "poster": {
@@ -4427,8 +4493,8 @@
       "imdb": 6.2
     },
     "votes": {
-      "kp": 31355,
-      "imdb": 109970
+      "kp": 31380,
+      "imdb": 109984
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10703959/f044bef5-08f8-422a-b099-0baa94c8c784/600x900",
@@ -4459,7 +4525,7 @@
       "imdb": 6.8
     },
     "votes": {
-      "kp": 11792,
+      "kp": 11796,
       "imdb": 33000
     },
     "poster": {
@@ -4493,8 +4559,8 @@
       "imdb": 7.2
     },
     "votes": {
-      "kp": 216622,
-      "imdb": 19062
+      "kp": 216641,
+      "imdb": 19063
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/4303601/755c597b-ba05-43dc-a0e4-a2dc39936d0d/600x900",
@@ -4524,8 +4590,8 @@
       "imdb": 7.8
     },
     "votes": {
-      "kp": 96756,
-      "imdb": 180444
+      "kp": 96808,
+      "imdb": 180484
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/4486454/659281fe-87d1-459b-9c0b-66dde5a21674/600x900",
@@ -4586,8 +4652,8 @@
       "imdb": 6
     },
     "votes": {
-      "kp": 248610,
-      "imdb": 1128
+      "kp": 248748,
+      "imdb": 1129
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10835644/b1193d3d-27e0-429b-a099-247d97f6e5c1/600x900",
@@ -4617,7 +4683,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 144755,
+      "kp": 144799,
       "imdb": 0
     },
     "poster": {
@@ -4649,7 +4715,7 @@
       "imdb": 6.4
     },
     "votes": {
-      "kp": 9993,
+      "kp": 10014,
       "imdb": 138
     },
     "poster": {
@@ -4679,7 +4745,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 63288,
+      "kp": 63290,
       "imdb": 0
     },
     "poster": {
@@ -4744,7 +4810,7 @@
       "imdb": 5.8
     },
     "votes": {
-      "kp": 53300,
+      "kp": 53305,
       "imdb": 25000
     },
     "poster": {
@@ -4777,7 +4843,7 @@
       "imdb": 8.3
     },
     "votes": {
-      "kp": 6102,
+      "kp": 6105,
       "imdb": 138000
     },
     "poster": {
@@ -4809,7 +4875,7 @@
       "imdb": 5.7
     },
     "votes": {
-      "kp": 120560,
+      "kp": 120675,
       "imdb": 225
     },
     "poster": {
@@ -4839,7 +4905,7 @@
       "imdb": 6.2
     },
     "votes": {
-      "kp": 22735,
+      "kp": 22745,
       "imdb": 1000
     },
     "poster": {
@@ -4871,8 +4937,8 @@
       "imdb": 7
     },
     "votes": {
-      "kp": 78932,
-      "imdb": 182795
+      "kp": 78946,
+      "imdb": 182809
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/6201401/9246c256-5b7b-4331-bce5-0905d4c24ab6/600x900",
@@ -4901,7 +4967,7 @@
       "imdb": 6.4
     },
     "votes": {
-      "kp": 5916,
+      "kp": 5924,
       "imdb": 23
     },
     "poster": {
@@ -4936,8 +5002,8 @@
       "imdb": 7.5
     },
     "votes": {
-      "kp": 199226,
-      "imdb": 78844
+      "kp": 199234,
+      "imdb": 78871
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/1629390/a8cf8b09-d5a9-455b-b282-e680222d459a/600x900",
@@ -4968,7 +5034,7 @@
       "imdb": 7
     },
     "votes": {
-      "kp": 90768,
+      "kp": 90782,
       "imdb": 18000
     },
     "poster": {
@@ -5000,7 +5066,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 95486,
+      "kp": 95510,
       "imdb": 0
     },
     "poster": {
@@ -5030,7 +5096,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 11978,
+      "kp": 11983,
       "imdb": 0
     },
     "poster": {
@@ -5062,8 +5128,8 @@
       "imdb": 7.1
     },
     "votes": {
-      "kp": 189479,
-      "imdb": 537990
+      "kp": 189510,
+      "imdb": 538054
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/4716873/712ebe90-3ea1-4e57-a286-afef4aec004e/600x900",
@@ -5156,7 +5222,7 @@
       "imdb": 5.6
     },
     "votes": {
-      "kp": 11499,
+      "kp": 11500,
       "imdb": 2700
     },
     "poster": {
@@ -5222,7 +5288,7 @@
       "imdb": 6.2
     },
     "votes": {
-      "kp": 152798,
+      "kp": 152888,
       "imdb": 1500
     },
     "poster": {
@@ -5253,7 +5319,7 @@
       "imdb": 5.8
     },
     "votes": {
-      "kp": 32469,
+      "kp": 32481,
       "imdb": 342
     },
     "poster": {
@@ -5317,7 +5383,7 @@
       "imdb": 5.9
     },
     "votes": {
-      "kp": 53571,
+      "kp": 53574,
       "imdb": 2100
     },
     "poster": {
@@ -5348,7 +5414,7 @@
       "imdb": 4.2
     },
     "votes": {
-      "kp": 29746,
+      "kp": 29751,
       "imdb": 11000
     },
     "poster": {
@@ -5381,7 +5447,7 @@
       "imdb": 4.5
     },
     "votes": {
-      "kp": 41116,
+      "kp": 41131,
       "imdb": 286
     },
     "poster": {
@@ -5444,8 +5510,8 @@
       "imdb": 7.1
     },
     "votes": {
-      "kp": 331007,
-      "imdb": 686614
+      "kp": 331042,
+      "imdb": 686713
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/4774061/9c7a6c39-a9fc-4c15-a634-ada778f7b86c/600x900",
@@ -5476,8 +5542,8 @@
       "imdb": 6.5
     },
     "votes": {
-      "kp": 517169,
-      "imdb": 106488
+      "kp": 517471,
+      "imdb": 106507
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/4774061/7256e155-6004-4355-a542-a881607eefe4/600x900",
@@ -5598,8 +5664,8 @@
       "imdb": 6.7
     },
     "votes": {
-      "kp": 116791,
-      "imdb": 4597
+      "kp": 116794,
+      "imdb": 4603
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/4774061/ea924a52-a975-4132-a62f-feda15e2dd79/600x900",
@@ -5693,7 +5759,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 6017,
+      "kp": 6024,
       "imdb": 0
     },
     "poster": {
@@ -5723,7 +5789,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 33918,
+      "kp": 34113,
       "imdb": 0
     },
     "poster": {
@@ -5757,7 +5823,7 @@
       "imdb": 6.5
     },
     "votes": {
-      "kp": 19398,
+      "kp": 19402,
       "imdb": 109000
     },
     "poster": {
@@ -5789,7 +5855,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 20876,
+      "kp": 20885,
       "imdb": 0
     },
     "poster": {
@@ -5821,7 +5887,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 47468,
+      "kp": 47512,
       "imdb": 0
     },
     "poster": {
@@ -5883,7 +5949,7 @@
       "imdb": 6.4
     },
     "votes": {
-      "kp": 90550,
+      "kp": 90585,
       "imdb": 3100
     },
     "poster": {
@@ -5975,7 +6041,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 32726,
+      "kp": 32737,
       "imdb": 0
     },
     "poster": {
@@ -6005,7 +6071,7 @@
       "imdb": 4.7
     },
     "votes": {
-      "kp": 12962,
+      "kp": 12969,
       "imdb": 493
     },
     "poster": {
@@ -6037,7 +6103,7 @@
       "imdb": 6.3
     },
     "votes": {
-      "kp": 27313,
+      "kp": 27315,
       "imdb": 2400
     },
     "poster": {
@@ -6102,7 +6168,7 @@
       "imdb": 7.6
     },
     "votes": {
-      "kp": 12256,
+      "kp": 12258,
       "imdb": 94000
     },
     "poster": {
@@ -6162,7 +6228,7 @@
       "imdb": 7.4
     },
     "votes": {
-      "kp": 12019,
+      "kp": 12045,
       "imdb": 15
     },
     "poster": {
@@ -6195,7 +6261,7 @@
       "imdb": 6.4
     },
     "votes": {
-      "kp": 24754,
+      "kp": 24755,
       "imdb": 2500
     },
     "poster": {
@@ -6226,7 +6292,7 @@
       "imdb": 6.3
     },
     "votes": {
-      "kp": 66582,
+      "kp": 66675,
       "imdb": 261
     },
     "poster": {
@@ -6290,8 +6356,8 @@
       "imdb": 6
     },
     "votes": {
-      "kp": 700393,
-      "imdb": 1575
+      "kp": 700646,
+      "imdb": 1576
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10893610/e67acc36-dc80-4c2c-ba64-426f8a2ae073/600x900",
@@ -6386,7 +6452,7 @@
       "imdb": 5.3
     },
     "votes": {
-      "kp": 23149,
+      "kp": 23158,
       "imdb": 3100
     },
     "poster": {
@@ -6420,8 +6486,8 @@
       "imdb": 7.2
     },
     "votes": {
-      "kp": 55805,
-      "imdb": 130749
+      "kp": 55807,
+      "imdb": 130760
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/1898899/827c9def-0978-42c7-ba63-3002e847c827/600x900",
@@ -6452,7 +6518,7 @@
       "imdb": 5.7
     },
     "votes": {
-      "kp": 49562,
+      "kp": 49563,
       "imdb": 675
     },
     "poster": {
@@ -6515,7 +6581,7 @@
       "imdb": 6
     },
     "votes": {
-      "kp": 25577,
+      "kp": 25591,
       "imdb": 2000
     },
     "poster": {
@@ -6584,7 +6650,7 @@
       "imdb": 5.9
     },
     "votes": {
-      "kp": 37122,
+      "kp": 37123,
       "imdb": 35000
     },
     "poster": {
@@ -6616,7 +6682,7 @@
       "imdb": 5.4
     },
     "votes": {
-      "kp": 76185,
+      "kp": 76250,
       "imdb": 1100
     },
     "poster": {
@@ -6646,7 +6712,7 @@
       "imdb": 5.8
     },
     "votes": {
-      "kp": 24596,
+      "kp": 24632,
       "imdb": 57
     },
     "poster": {
@@ -6711,7 +6777,7 @@
       "imdb": 5.9
     },
     "votes": {
-      "kp": 13294,
+      "kp": 13296,
       "imdb": 1400
     },
     "poster": {
@@ -6741,7 +6807,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 198692,
+      "kp": 198821,
       "imdb": 0
     },
     "poster": {
@@ -6806,8 +6872,8 @@
       "imdb": 6.7
     },
     "votes": {
-      "kp": 24757,
-      "imdb": 9975
+      "kp": 25848,
+      "imdb": 10215
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10893610/e52f94a5-35fa-45ea-888c-5a76b2413d76/600x900",
@@ -6927,7 +6993,7 @@
       "imdb": 6.8
     },
     "votes": {
-      "kp": 79493,
+      "kp": 79498,
       "imdb": 1351
     },
     "poster": {
@@ -6958,7 +7024,7 @@
       "imdb": 4.5
     },
     "votes": {
-      "kp": 129132,
+      "kp": 129214,
       "imdb": 1889
     },
     "poster": {
@@ -6992,7 +7058,7 @@
       "imdb": 6.8
     },
     "votes": {
-      "kp": 112392,
+      "kp": 112418,
       "imdb": 2481
     },
     "poster": {
@@ -7023,7 +7089,7 @@
       "imdb": 6.1
     },
     "votes": {
-      "kp": 23655,
+      "kp": 23664,
       "imdb": 236
     },
     "poster": {
@@ -7116,7 +7182,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 26841,
+      "kp": 26844,
       "imdb": 0
     },
     "poster": {
@@ -7148,7 +7214,7 @@
       "imdb": 6.6
     },
     "votes": {
-      "kp": 16467,
+      "kp": 16478,
       "imdb": 2700
     },
     "poster": {
@@ -7211,7 +7277,7 @@
       "imdb": 6.7
     },
     "votes": {
-      "kp": 1347579,
+      "kp": 1347995,
       "imdb": 2129
     },
     "poster": {
@@ -7273,7 +7339,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 49642,
+      "kp": 49677,
       "imdb": 0
     },
     "poster": {
@@ -7304,7 +7370,7 @@
       "imdb": 5.5
     },
     "votes": {
-      "kp": 7528,
+      "kp": 7529,
       "imdb": 145
     },
     "poster": {
@@ -7337,7 +7403,7 @@
       "imdb": 6.4
     },
     "votes": {
-      "kp": 10959,
+      "kp": 10962,
       "imdb": 3100
     },
     "poster": {
@@ -7369,7 +7435,7 @@
       "imdb": 7.4
     },
     "votes": {
-      "kp": 16450,
+      "kp": 16470,
       "imdb": 9200
     },
     "poster": {
@@ -7433,7 +7499,7 @@
       "imdb": 5.8
     },
     "votes": {
-      "kp": 27882,
+      "kp": 27883,
       "imdb": 828
     },
     "poster": {
@@ -7465,7 +7531,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 91581,
+      "kp": 91873,
       "imdb": 0
     },
     "poster": {
@@ -7498,8 +7564,8 @@
       "imdb": 6.1
     },
     "votes": {
-      "kp": 39685,
-      "imdb": 54251
+      "kp": 39696,
+      "imdb": 54278
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/4303601/30a4c46e-dc75-46b5-aed8-35f69d8d295a/600x900",
@@ -7529,7 +7595,7 @@
       "imdb": 6.3
     },
     "votes": {
-      "kp": 6601,
+      "kp": 6610,
       "imdb": 188
     },
     "poster": {
@@ -7563,8 +7629,8 @@
       "imdb": 7.7
     },
     "votes": {
-      "kp": 636657,
-      "imdb": 667008
+      "kp": 636713,
+      "imdb": 667100
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10671298/5a114ee7-3a48-4edb-8693-b1e769fb006e/600x900",
@@ -7751,7 +7817,7 @@
       "imdb": 5.6
     },
     "votes": {
-      "kp": 10090,
+      "kp": 10093,
       "imdb": 4200
     },
     "poster": {
@@ -7784,8 +7850,8 @@
       "imdb": 7.1
     },
     "votes": {
-      "kp": 61876,
-      "imdb": 164919
+      "kp": 61886,
+      "imdb": 164933
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/4486362/8874e9f7-840d-4e7d-9fb3-935ad6851b8e/600x900",
@@ -7825,67 +7891,6 @@
     },
     "logo": "https://image.tmdb.org/t/p/original/8QJCpLeD1kszlfLc7kBEwww86sJ.png",
     "year": 2025,
-    "ageRating": "18+",
-    "top250": null
-  },
-  {
-    "id": 1320413,
-    "name": "Аким",
-    "alternativeName": "Аким",
-    "movieLength": 110,
-    "shortDescription": "Сын чиновника становится главой отдаленного поселка. Остросоциальная комедия от автора «Келинки Сабины»",
-    "genres": [
-      "комедия"
-    ],
-    "countries": [
-      "Казахстан"
-    ],
-    "type": "movie",
-    "rating": {
-      "kp": 7.2,
-      "imdb": 6.5
-    },
-    "votes": {
-      "kp": 22783,
-      "imdb": 95
-    },
-    "poster": {
-      "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/4774061/6ef4ce54-93da-4666-9c98-541a08be3b74/600x900",
-      "previewUrl": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/4774061/6ef4ce54-93da-4666-9c98-541a08be3b74/300x450"
-    },
-    "logo": null,
-    "year": 2019,
-    "ageRating": "12+",
-    "top250": null
-  },
-  {
-    "id": 1320423,
-    "name": "Граница: Таежный роман",
-    "alternativeName": "Граница: Таежный роман",
-    "movieLength": 126,
-    "shortDescription": "В гарнизоне проходят учения. Капитан Никита Голощекин командует. Его жена Марина выполняет обязанности военного врача. Она нравится всем. Но лейтенант Иван Столбов давно в нее влюблен, поэтому ему нравится быть «раненым» и слабым. Марина рассказывает подругам о том, что тоже не равнодушна к обаятельному лейтенанту. Но скоро Марина с Иваном станут героями настоящего детектива...",
-    "genres": [
-      "драма",
-      "мелодрама"
-    ],
-    "countries": [
-      "Россия"
-    ],
-    "type": "movie",
-    "rating": {
-      "kp": 7.6,
-      "imdb": 0
-    },
-    "votes": {
-      "kp": 6609,
-      "imdb": 0
-    },
-    "poster": {
-      "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/1629390/514017a6-f5c4-4ad5-8aa4-6ba6e4b65c3e/600x900",
-      "previewUrl": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/1629390/514017a6-f5c4-4ad5-8aa4-6ba6e4b65c3e/300x450"
-    },
-    "logo": null,
-    "year": 2000,
     "ageRating": "18+",
     "top250": null
   },
@@ -7938,7 +7943,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 86024,
+      "kp": 87413,
       "imdb": 0
     },
     "poster": {
@@ -7969,7 +7974,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 13545,
+      "kp": 14173,
       "imdb": 0
     },
     "poster": {
@@ -8000,7 +8005,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 5302,
+      "kp": 5371,
       "imdb": 0
     },
     "poster": {
@@ -8030,7 +8035,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 39228,
+      "kp": 40403,
       "imdb": 0
     },
     "poster": {
@@ -8061,7 +8066,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 35798,
+      "kp": 36220,
       "imdb": 0
     },
     "poster": {
@@ -8091,7 +8096,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 6850,
+      "kp": 7093,
       "imdb": 0
     },
     "poster": {
@@ -8121,7 +8126,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 16168,
+      "kp": 16296,
       "imdb": 0
     },
     "poster": {
@@ -8151,7 +8156,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 12559,
+      "kp": 12720,
       "imdb": 0
     },
     "poster": {
@@ -8182,7 +8187,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 23094,
+      "kp": 23320,
       "imdb": 0
     },
     "poster": {
@@ -8214,8 +8219,8 @@
       "imdb": 6.2
     },
     "votes": {
-      "kp": 11209,
-      "imdb": 37076
+      "kp": 11256,
+      "imdb": 37237
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10809116/ba698adf-2fcb-453c-afe4-59f5d5aafefa/600x900",
@@ -8245,7 +8250,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 43253,
+      "kp": 43555,
       "imdb": 0
     },
     "poster": {
@@ -8279,7 +8284,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 21837,
+      "kp": 22100,
       "imdb": 0
     },
     "poster": {
@@ -8310,7 +8315,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 9564,
+      "kp": 9648,
       "imdb": 0
     },
     "poster": {
@@ -8343,7 +8348,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 17490,
+      "kp": 17589,
       "imdb": 0
     },
     "poster": {
@@ -8406,7 +8411,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 23731,
+      "kp": 23887,
       "imdb": 0
     },
     "poster": {
@@ -8437,7 +8442,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 9447,
+      "kp": 9473,
       "imdb": 0
     },
     "poster": {
@@ -8469,7 +8474,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 9620,
+      "kp": 9811,
       "imdb": 0
     },
     "poster": {
@@ -8495,11 +8500,11 @@
     ],
     "type": "tv-series",
     "rating": {
-      "kp": 7.3,
+      "kp": 7.2,
       "imdb": 0
     },
     "votes": {
-      "kp": 7790,
+      "kp": 7837,
       "imdb": 0
     },
     "poster": {
@@ -8526,12 +8531,12 @@
     ],
     "type": "tv-series",
     "rating": {
-      "kp": 8.2,
+      "kp": 8.3,
       "imdb": 7.7
     },
     "votes": {
-      "kp": 7949,
-      "imdb": 648
+      "kp": 7951,
+      "imdb": 651
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10592371/82b5a397-5449-4855-ad5b-9bc0ecb90138/600x900",
@@ -8561,7 +8566,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 540046,
+      "kp": 543027,
       "imdb": 0
     },
     "poster": {
@@ -8594,7 +8599,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 13508,
+      "kp": 13572,
       "imdb": 0
     },
     "poster": {
@@ -8626,8 +8631,8 @@
       "imdb": 7.8
     },
     "votes": {
-      "kp": 9500,
-      "imdb": 35864
+      "kp": 9528,
+      "imdb": 35928
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10809116/584729e4-f025-4c57-ab34-ccb8e51dbf98/600x900",
@@ -8657,7 +8662,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 23749,
+      "kp": 23836,
       "imdb": 0
     },
     "poster": {
@@ -8690,7 +8695,7 @@
       "imdb": 7.4
     },
     "votes": {
-      "kp": 5515,
+      "kp": 5516,
       "imdb": 805
     },
     "poster": {
@@ -8720,7 +8725,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 10647,
+      "kp": 10653,
       "imdb": 0
     },
     "poster": {
@@ -8751,7 +8756,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 22175,
+      "kp": 22205,
       "imdb": 0
     },
     "poster": {
@@ -8781,7 +8786,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 45085,
+      "kp": 46052,
       "imdb": 0
     },
     "poster": {
@@ -8813,7 +8818,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 8369,
+      "kp": 8479,
       "imdb": 0
     },
     "poster": {
@@ -8845,7 +8850,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 383694,
+      "kp": 385168,
       "imdb": 0
     },
     "poster": {
@@ -8876,7 +8881,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 48125,
+      "kp": 48244,
       "imdb": 0
     },
     "poster": {
@@ -8907,7 +8912,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 5055,
+      "kp": 5100,
       "imdb": 0
     },
     "poster": {
@@ -8938,7 +8943,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 20059,
+      "kp": 20135,
       "imdb": 0
     },
     "poster": {
@@ -8969,7 +8974,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 19503,
+      "kp": 19572,
       "imdb": 0
     },
     "poster": {
@@ -9000,7 +9005,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 109346,
+      "kp": 109932,
       "imdb": 0
     },
     "poster": {
@@ -9030,7 +9035,7 @@
       "imdb": 6.3
     },
     "votes": {
-      "kp": 26781,
+      "kp": 26829,
       "imdb": 76
     },
     "poster": {
@@ -9061,7 +9066,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 37100,
+      "kp": 37464,
       "imdb": 0
     },
     "poster": {
@@ -9094,7 +9099,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 7489,
+      "kp": 7492,
       "imdb": 0
     },
     "poster": {
@@ -9125,7 +9130,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 12827,
+      "kp": 12860,
       "imdb": 0
     },
     "poster": {
@@ -9156,8 +9161,8 @@
       "imdb": 7.8
     },
     "votes": {
-      "kp": 62709,
-      "imdb": 61305
+      "kp": 62763,
+      "imdb": 61378
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10768063/4049c2c0-e26c-44f4-9591-7f7a04f2a7eb/600x900",
@@ -9186,7 +9191,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 5321,
+      "kp": 5390,
       "imdb": 0
     },
     "poster": {
@@ -9216,7 +9221,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 5003,
+      "kp": 5005,
       "imdb": 0
     },
     "poster": {
@@ -9248,8 +9253,8 @@
       "imdb": 6.3
     },
     "votes": {
-      "kp": 8046,
-      "imdb": 9320
+      "kp": 8056,
+      "imdb": 9333
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10703859/518564f7-e787-4e37-8daa-09b3c0663003/600x900",
@@ -9281,7 +9286,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 290500,
+      "kp": 290763,
       "imdb": 0
     },
     "poster": {
@@ -9313,8 +9318,8 @@
       "imdb": 8.2
     },
     "votes": {
-      "kp": 8504,
-      "imdb": 1734
+      "kp": 8512,
+      "imdb": 1741
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10900341/2514597a-2913-45c3-9d56-ad1bdc863245/600x900",
@@ -9345,7 +9350,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 16037,
+      "kp": 16059,
       "imdb": 0
     },
     "poster": {
@@ -9378,7 +9383,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 39419,
+      "kp": 39457,
       "imdb": 0
     },
     "poster": {
@@ -9410,7 +9415,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 5222,
+      "kp": 5228,
       "imdb": 0
     },
     "poster": {
@@ -9441,7 +9446,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 12504,
+      "kp": 12552,
       "imdb": 0
     },
     "poster": {
@@ -9473,7 +9478,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 68586,
+      "kp": 68794,
       "imdb": 0
     },
     "poster": {
@@ -9534,7 +9539,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 35589,
+      "kp": 35745,
       "imdb": 0
     },
     "poster": {
@@ -9564,7 +9569,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 19984,
+      "kp": 20107,
       "imdb": 0
     },
     "poster": {
@@ -9591,11 +9596,11 @@
     ],
     "type": "tv-series",
     "rating": {
-      "kp": 7.9,
+      "kp": 8,
       "imdb": 0
     },
     "votes": {
-      "kp": 14450,
+      "kp": 14548,
       "imdb": 0
     },
     "poster": {
@@ -9626,7 +9631,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 8991,
+      "kp": 9054,
       "imdb": 0
     },
     "poster": {
@@ -9652,11 +9657,11 @@
     ],
     "type": "tv-series",
     "rating": {
-      "kp": 7.8,
+      "kp": 7.9,
       "imdb": 0
     },
     "votes": {
-      "kp": 28339,
+      "kp": 28502,
       "imdb": 0
     },
     "poster": {
@@ -9686,7 +9691,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 15369,
+      "kp": 15437,
       "imdb": 0
     },
     "poster": {
@@ -9778,7 +9783,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 22645,
+      "kp": 22663,
       "imdb": 0
     },
     "poster": {
@@ -9809,8 +9814,8 @@
       "imdb": 8.7
     },
     "votes": {
-      "kp": 13336,
-      "imdb": 5982
+      "kp": 13361,
+      "imdb": 5992
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/4716873/3e79771c-5b21-446a-8cc9-77defd20a80f/600x900",
@@ -9841,7 +9846,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 17928,
+      "kp": 18892,
       "imdb": 0
     },
     "poster": {
@@ -9871,7 +9876,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 34311,
+      "kp": 34441,
       "imdb": 0
     },
     "poster": {
@@ -9901,7 +9906,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 15437,
+      "kp": 15490,
       "imdb": 0
     },
     "poster": {
@@ -9931,7 +9936,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 436611,
+      "kp": 437458,
       "imdb": 0
     },
     "poster": {
@@ -9964,7 +9969,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 73634,
+      "kp": 73823,
       "imdb": 0
     },
     "poster": {
@@ -10025,8 +10030,8 @@
       "imdb": 8.5
     },
     "votes": {
-      "kp": 6725,
-      "imdb": 2308
+      "kp": 6769,
+      "imdb": 2312
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10592371/37860f38-dd69-475c-bf6a-21443fc727cb/600x900",
@@ -10056,7 +10061,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 12464,
+      "kp": 12483,
       "imdb": 0
     },
     "poster": {
@@ -10088,7 +10093,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 58895,
+      "kp": 58911,
       "imdb": 0
     },
     "poster": {
@@ -10121,7 +10126,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 115287,
+      "kp": 116732,
       "imdb": 0
     },
     "poster": {
@@ -10182,7 +10187,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 109166,
+      "kp": 109202,
       "imdb": 0
     },
     "poster": {
@@ -10212,7 +10217,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 17230,
+      "kp": 17695,
       "imdb": 0
     },
     "poster": {
@@ -10242,7 +10247,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 5380,
+      "kp": 5386,
       "imdb": 0
     },
     "poster": {
@@ -10272,8 +10277,8 @@
       "imdb": 6.5
     },
     "votes": {
-      "kp": 63214,
-      "imdb": 813
+      "kp": 63410,
+      "imdb": 814
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10703959/a382ab78-357f-47bd-a704-7afdde6e1450/600x900",
@@ -10303,7 +10308,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 5912,
+      "kp": 5923,
       "imdb": 0
     },
     "poster": {
@@ -10333,7 +10338,7 @@
       "imdb": 7.5
     },
     "votes": {
-      "kp": 7501,
+      "kp": 7502,
       "imdb": 2400
     },
     "poster": {
@@ -10363,7 +10368,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 11753,
+      "kp": 11754,
       "imdb": 0
     },
     "poster": {
@@ -10393,7 +10398,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 16435,
+      "kp": 16436,
       "imdb": 0
     },
     "poster": {
@@ -10520,11 +10525,11 @@
     ],
     "type": "tv-series",
     "rating": {
-      "kp": 7,
+      "kp": 7.1,
       "imdb": 0
     },
     "votes": {
-      "kp": 207641,
+      "kp": 207648,
       "imdb": 0
     },
     "poster": {
@@ -10556,7 +10561,7 @@
       "imdb": 7
     },
     "votes": {
-      "kp": 17869,
+      "kp": 17870,
       "imdb": 32000
     },
     "poster": {
@@ -10588,7 +10593,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 10644,
+      "kp": 10651,
       "imdb": 0
     },
     "poster": {
@@ -10648,7 +10653,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 9413,
+      "kp": 9418,
       "imdb": 0
     },
     "poster": {
@@ -10738,7 +10743,7 @@
       "imdb": 7
     },
     "votes": {
-      "kp": 122901,
+      "kp": 122905,
       "imdb": 191
     },
     "poster": {
@@ -10799,7 +10804,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 13591,
+      "kp": 13604,
       "imdb": 0
     },
     "poster": {
@@ -10861,7 +10866,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 10409,
+      "kp": 10414,
       "imdb": 0
     },
     "poster": {
@@ -10893,7 +10898,7 @@
       "imdb": 7.5
     },
     "votes": {
-      "kp": 5435,
+      "kp": 5436,
       "imdb": 91000
     },
     "poster": {
@@ -10923,7 +10928,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 144507,
+      "kp": 145117,
       "imdb": 0
     },
     "poster": {
@@ -10954,7 +10959,7 @@
       "imdb": 6.3
     },
     "votes": {
-      "kp": 175469,
+      "kp": 175506,
       "imdb": 132
     },
     "poster": {
@@ -10986,7 +10991,7 @@
       "imdb": 8.2
     },
     "votes": {
-      "kp": 9648,
+      "kp": 9649,
       "imdb": 29000
     },
     "poster": {
@@ -11018,7 +11023,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 190505,
+      "kp": 190601,
       "imdb": 0
     },
     "poster": {
@@ -11048,7 +11053,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 7076,
+      "kp": 7078,
       "imdb": 0
     },
     "poster": {
@@ -11078,7 +11083,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 222698,
+      "kp": 222823,
       "imdb": 0
     },
     "poster": {
@@ -11140,7 +11145,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 162714,
+      "kp": 162803,
       "imdb": 0
     },
     "poster": {
@@ -11174,8 +11179,8 @@
       "imdb": 8.2
     },
     "votes": {
-      "kp": 147645,
-      "imdb": 5572
+      "kp": 148026,
+      "imdb": 5575
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10592371/6cbb9ae5-cf66-44ee-9a97-9a12653d9f77/600x900",
@@ -11207,7 +11212,7 @@
       "imdb": 7.4
     },
     "votes": {
-      "kp": 44123,
+      "kp": 44128,
       "imdb": 31000
     },
     "poster": {
@@ -11237,7 +11242,7 @@
       "imdb": 7.1
     },
     "votes": {
-      "kp": 16816,
+      "kp": 16817,
       "imdb": 1900
     },
     "poster": {
@@ -11269,7 +11274,7 @@
       "imdb": 7.6
     },
     "votes": {
-      "kp": 8425,
+      "kp": 8430,
       "imdb": 14000
     },
     "poster": {
@@ -11334,7 +11339,7 @@
       "imdb": 5.8
     },
     "votes": {
-      "kp": 27520,
+      "kp": 27524,
       "imdb": 23448
     },
     "poster": {
@@ -11429,7 +11434,7 @@
       "imdb": 6.6
     },
     "votes": {
-      "kp": 867878,
+      "kp": 868369,
       "imdb": 2154
     },
     "poster": {
@@ -11459,7 +11464,7 @@
       "imdb": 6.2
     },
     "votes": {
-      "kp": 1510943,
+      "kp": 1511788,
       "imdb": 712
     },
     "poster": {
@@ -11489,7 +11494,7 @@
       "imdb": 6.3
     },
     "votes": {
-      "kp": 78861,
+      "kp": 78882,
       "imdb": 205
     },
     "poster": {
@@ -11519,7 +11524,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 16028,
+      "kp": 16032,
       "imdb": 0
     },
     "poster": {
@@ -11549,7 +11554,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 199571,
+      "kp": 199650,
       "imdb": 0
     },
     "poster": {
@@ -11614,7 +11619,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 135352,
+      "kp": 135397,
       "imdb": 0
     },
     "poster": {
@@ -11675,7 +11680,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 205561,
+      "kp": 205959,
       "imdb": 0
     },
     "poster": {
@@ -11705,7 +11710,7 @@
       "imdb": 9
     },
     "votes": {
-      "kp": 5069,
+      "kp": 5071,
       "imdb": 116
     },
     "poster": {
@@ -11735,7 +11740,7 @@
       "imdb": 7.4
     },
     "votes": {
-      "kp": 25640,
+      "kp": 25659,
       "imdb": 1800
     },
     "poster": {
@@ -11795,7 +11800,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 9433,
+      "kp": 9434,
       "imdb": 0
     },
     "poster": {
@@ -11825,7 +11830,7 @@
       "imdb": 7.9
     },
     "votes": {
-      "kp": 6146,
+      "kp": 6149,
       "imdb": 323
     },
     "poster": {
@@ -11887,7 +11892,7 @@
       "imdb": 7.7
     },
     "votes": {
-      "kp": 7719,
+      "kp": 7728,
       "imdb": 28
     },
     "poster": {
@@ -11918,11 +11923,11 @@
     ],
     "type": "tv-series",
     "rating": {
-      "kp": 7.6,
+      "kp": 7.5,
       "imdb": 6.7
     },
     "votes": {
-      "kp": 10654,
+      "kp": 10807,
       "imdb": 678
     },
     "poster": {
@@ -11955,7 +11960,7 @@
       "imdb": 6.6
     },
     "votes": {
-      "kp": 20853,
+      "kp": 20854,
       "imdb": 33863
     },
     "poster": {
@@ -11986,7 +11991,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 24707,
+      "kp": 24727,
       "imdb": 0
     },
     "poster": {
@@ -12016,7 +12021,7 @@
       "imdb": 5.7
     },
     "votes": {
-      "kp": 449354,
+      "kp": 449881,
       "imdb": 276
     },
     "poster": {
@@ -12080,8 +12085,8 @@
       "imdb": 7.9
     },
     "votes": {
-      "kp": 171113,
-      "imdb": 54512
+      "kp": 171284,
+      "imdb": 54591
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10812607/c4f0b83c-7f52-410c-bb5c-60973c1278ae/600x900",
@@ -12173,7 +12178,7 @@
       "imdb": 8.1
     },
     "votes": {
-      "kp": 7694,
+      "kp": 7703,
       "imdb": 932
     },
     "poster": {
@@ -12203,7 +12208,7 @@
       "imdb": 6
     },
     "votes": {
-      "kp": 30845,
+      "kp": 30854,
       "imdb": 49
     },
     "poster": {
@@ -12235,7 +12240,7 @@
       "imdb": 6.9
     },
     "votes": {
-      "kp": 93777,
+      "kp": 93887,
       "imdb": 172
     },
     "poster": {
@@ -12267,8 +12272,8 @@
       "imdb": 5.6
     },
     "votes": {
-      "kp": 23674,
-      "imdb": 35323
+      "kp": 23676,
+      "imdb": 35328
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/4486362/82496d20-99a6-456a-8858-8709d295afc6/600x900",
@@ -12327,7 +12332,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 70742,
+      "kp": 70745,
       "imdb": 0
     },
     "poster": {
@@ -12422,7 +12427,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 7762,
+      "kp": 7763,
       "imdb": 0
     },
     "poster": {
@@ -12455,7 +12460,7 @@
       "imdb": 6.4
     },
     "votes": {
-      "kp": 12954,
+      "kp": 12959,
       "imdb": 141
     },
     "poster": {
@@ -12485,7 +12490,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 85471,
+      "kp": 85585,
       "imdb": 0
     },
     "poster": {
@@ -12516,7 +12521,7 @@
       "imdb": 8.1
     },
     "votes": {
-      "kp": 9288,
+      "kp": 9290,
       "imdb": 13000
     },
     "poster": {
@@ -12549,7 +12554,7 @@
       "imdb": 7.3
     },
     "votes": {
-      "kp": 26869,
+      "kp": 26871,
       "imdb": 7900
     },
     "poster": {
@@ -12585,8 +12590,8 @@
       "imdb": 8.3
     },
     "votes": {
-      "kp": 50089,
-      "imdb": 212665
+      "kp": 50098,
+      "imdb": 212683
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10835644/4c94adbe-66d3-44b9-9a27-18eb522fc2fd/600x900",
@@ -12616,7 +12621,7 @@
       "imdb": 7
     },
     "votes": {
-      "kp": 7741,
+      "kp": 7753,
       "imdb": 439
     },
     "poster": {
@@ -12646,7 +12651,7 @@
       "imdb": 7.9
     },
     "votes": {
-      "kp": 33790,
+      "kp": 33796,
       "imdb": 6422
     },
     "poster": {
@@ -12677,7 +12682,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 29520,
+      "kp": 29521,
       "imdb": 0
     },
     "poster": {
@@ -12740,8 +12745,8 @@
       "imdb": 7.4
     },
     "votes": {
-      "kp": 30542,
-      "imdb": 149725
+      "kp": 30550,
+      "imdb": 149744
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/1773646/8d1b6436-0da5-4cf9-b6d7-9277688e63b4/600x900",
@@ -12773,7 +12778,7 @@
       "imdb": 7.7
     },
     "votes": {
-      "kp": 45162,
+      "kp": 45164,
       "imdb": 20000
     },
     "poster": {
@@ -12895,7 +12900,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 12134,
+      "kp": 12135,
       "imdb": 0
     },
     "poster": {
@@ -12925,7 +12930,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 10577,
+      "kp": 10578,
       "imdb": 0
     },
     "poster": {
@@ -12957,7 +12962,7 @@
       "imdb": 6.8
     },
     "votes": {
-      "kp": 17695,
+      "kp": 17707,
       "imdb": 519
     },
     "poster": {
@@ -12988,7 +12993,7 @@
       "imdb": 7.5
     },
     "votes": {
-      "kp": 62338,
+      "kp": 62395,
       "imdb": 7134
     },
     "poster": {
@@ -13020,8 +13025,8 @@
       "imdb": 7.8
     },
     "votes": {
-      "kp": 24854,
-      "imdb": 70082
+      "kp": 25009,
+      "imdb": 70440
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/4486362/c91798bb-76c0-4fea-84ff-4dfd7bfe8114/600x900",
@@ -13050,7 +13055,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 26322,
+      "kp": 26464,
       "imdb": 0
     },
     "poster": {
@@ -13083,8 +13088,8 @@
       "imdb": 8.6
     },
     "votes": {
-      "kp": 142939,
-      "imdb": 416397
+      "kp": 142972,
+      "imdb": 416501
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10768063/fb5acf4d-c57e-4bf2-96ce-cdd4e78adf63/600x900",
@@ -13176,7 +13181,7 @@
       "imdb": 6.4
     },
     "votes": {
-      "kp": 68847,
+      "kp": 68902,
       "imdb": 12
     },
     "poster": {
@@ -13237,7 +13242,7 @@
       "imdb": 7.5
     },
     "votes": {
-      "kp": 43977,
+      "kp": 44041,
       "imdb": 112
     },
     "poster": {
@@ -13263,7 +13268,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 6081,
+      "kp": 6089,
       "imdb": 0
     },
     "poster": {
@@ -13296,7 +13301,7 @@
       "imdb": 5.2
     },
     "votes": {
-      "kp": 425124,
+      "kp": 425283,
       "imdb": 271
     },
     "poster": {
@@ -13326,7 +13331,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 11052,
+      "kp": 11073,
       "imdb": 0
     },
     "poster": {
@@ -13358,7 +13363,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 425302,
+      "kp": 425318,
       "imdb": 0
     },
     "poster": {
@@ -13419,7 +13424,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 10171,
+      "kp": 10192,
       "imdb": 0
     },
     "poster": {
@@ -13450,7 +13455,7 @@
       "imdb": 7.1
     },
     "votes": {
-      "kp": 16516,
+      "kp": 16535,
       "imdb": 668
     },
     "poster": {
@@ -13481,7 +13486,7 @@
       "imdb": 7.7
     },
     "votes": {
-      "kp": 127483,
+      "kp": 127494,
       "imdb": 67
     },
     "poster": {
@@ -13543,7 +13548,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 72248,
+      "kp": 72321,
       "imdb": 0
     },
     "poster": {
@@ -13606,7 +13611,7 @@
       "imdb": 7.6
     },
     "votes": {
-      "kp": 15627,
+      "kp": 15644,
       "imdb": 1900
     },
     "poster": {
@@ -13639,8 +13644,8 @@
       "imdb": 8.5
     },
     "votes": {
-      "kp": 137647,
-      "imdb": 20326
+      "kp": 137734,
+      "imdb": 20327
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/6201401/c692de39-0169-4c45-88b1-022fe1234db8/600x900",
@@ -13759,7 +13764,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 10585,
+      "kp": 10586,
       "imdb": 0
     },
     "poster": {
@@ -13792,7 +13797,7 @@
       "imdb": 7.6
     },
     "votes": {
-      "kp": 58484,
+      "kp": 58537,
       "imdb": 1700
     },
     "poster": {
@@ -13858,7 +13863,7 @@
       "imdb": 7.3
     },
     "votes": {
-      "kp": 134744,
+      "kp": 134800,
       "imdb": 13841
     },
     "poster": {
@@ -13923,7 +13928,7 @@
       "imdb": 7.5
     },
     "votes": {
-      "kp": 18927,
+      "kp": 18931,
       "imdb": 1700
     },
     "poster": {
@@ -13985,7 +13990,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 145770,
+      "kp": 145899,
       "imdb": 0
     },
     "poster": {
@@ -14017,7 +14022,7 @@
       "imdb": 5.7
     },
     "votes": {
-      "kp": 124946,
+      "kp": 125044,
       "imdb": 86
     },
     "poster": {
@@ -14047,7 +14052,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 6363,
+      "kp": 6365,
       "imdb": 0
     },
     "poster": {
@@ -14107,7 +14112,7 @@
       "imdb": 6.8
     },
     "votes": {
-      "kp": 151444,
+      "kp": 151606,
       "imdb": 56
     },
     "poster": {
@@ -14138,7 +14143,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 18839,
+      "kp": 18840,
       "imdb": 0
     },
     "poster": {
@@ -14199,7 +14204,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 17736,
+      "kp": 18047,
       "imdb": 0
     },
     "poster": {
@@ -14260,7 +14265,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 9536,
+      "kp": 9551,
       "imdb": 0
     },
     "poster": {
@@ -14290,7 +14295,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 87465,
+      "kp": 87506,
       "imdb": 0
     },
     "poster": {
@@ -14322,7 +14327,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 36684,
+      "kp": 36714,
       "imdb": 0
     },
     "poster": {
@@ -14354,7 +14359,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 9363,
+      "kp": 9364,
       "imdb": 0
     },
     "poster": {
@@ -14509,7 +14514,7 @@
       "imdb": 6.7
     },
     "votes": {
-      "kp": 21807,
+      "kp": 21808,
       "imdb": 6000
     },
     "poster": {
@@ -14541,7 +14546,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 58230,
+      "kp": 58234,
       "imdb": 0
     },
     "poster": {
@@ -14573,8 +14578,8 @@
       "imdb": 8.4
     },
     "votes": {
-      "kp": 48522,
-      "imdb": 171723
+      "kp": 48577,
+      "imdb": 171865
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/10812607/6eb8e93e-bf8e-4637-9758-5e86138d2312/600x900",
@@ -14605,8 +14610,8 @@
       "imdb": 7.2
     },
     "votes": {
-      "kp": 48222,
-      "imdb": 44068
+      "kp": 48235,
+      "imdb": 44076
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/4486454/44bc437f-aa1c-4681-9c6a-93ad3b0a3681/600x900",
@@ -14637,7 +14642,7 @@
       "imdb": 8.2
     },
     "votes": {
-      "kp": 8736,
+      "kp": 8737,
       "imdb": 25000
     },
     "poster": {
@@ -14667,7 +14672,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 9338,
+      "kp": 9360,
       "imdb": 0
     },
     "poster": {
@@ -14697,7 +14702,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 94862,
+      "kp": 94973,
       "imdb": 0
     },
     "poster": {
@@ -14733,7 +14738,7 @@
       "imdb": 7.6
     },
     "votes": {
-      "kp": 9089,
+      "kp": 9090,
       "imdb": 32000
     },
     "poster": {
@@ -14763,7 +14768,7 @@
       "imdb": 7.3
     },
     "votes": {
-      "kp": 10266,
+      "kp": 10275,
       "imdb": 490
     },
     "poster": {
@@ -14793,7 +14798,7 @@
       "imdb": 5.9
     },
     "votes": {
-      "kp": 10541,
+      "kp": 10542,
       "imdb": 3400
     },
     "poster": {
@@ -14859,7 +14864,7 @@
       "imdb": 7.2
     },
     "votes": {
-      "kp": 7820,
+      "kp": 7819,
       "imdb": 4800
     },
     "poster": {
@@ -14921,8 +14926,8 @@
       "imdb": 7.9
     },
     "votes": {
-      "kp": 341480,
-      "imdb": 13845
+      "kp": 341695,
+      "imdb": 13848
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/6201401/6375dcac-bf7e-40a8-9db6-2a804abd7632/600x900",
@@ -15013,7 +15018,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 73416,
+      "kp": 75665,
       "imdb": 0
     },
     "poster": {
@@ -15079,8 +15084,8 @@
       "imdb": 7.1
     },
     "votes": {
-      "kp": 84099,
-      "imdb": 44322
+      "kp": 84138,
+      "imdb": 44332
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/1898899/b3c9830b-b8b4-4892-9de5-3f0881525dce/600x900",
@@ -15173,7 +15178,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 7030,
+      "kp": 7031,
       "imdb": 0
     },
     "poster": {
@@ -15205,7 +15210,7 @@
       "imdb": 7.6
     },
     "votes": {
-      "kp": 11286,
+      "kp": 11287,
       "imdb": 49000
     },
     "poster": {
@@ -15235,7 +15240,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 28355,
+      "kp": 28356,
       "imdb": 0
     },
     "poster": {
@@ -15266,7 +15271,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 226638,
+      "kp": 226661,
       "imdb": 0
     },
     "poster": {
@@ -15298,7 +15303,7 @@
       "imdb": 7.1
     },
     "votes": {
-      "kp": 6465,
+      "kp": 6466,
       "imdb": 3600
     },
     "poster": {
@@ -15328,7 +15333,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 54849,
+      "kp": 55115,
       "imdb": 0
     },
     "poster": {
@@ -15390,7 +15395,7 @@
       "imdb": 0
     },
     "votes": {
-      "kp": 257664,
+      "kp": 257853,
       "imdb": 0
     },
     "poster": {
@@ -15424,7 +15429,7 @@
       "imdb": 6.6
     },
     "votes": {
-      "kp": 9951,
+      "kp": 9952,
       "imdb": 12000
     },
     "poster": {
@@ -15454,8 +15459,8 @@
       "imdb": 8
     },
     "votes": {
-      "kp": 270183,
-      "imdb": 5755
+      "kp": 270271,
+      "imdb": 5756
     },
     "poster": {
       "url": "https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/4303601/3f6e7639-9f58-41a5-ab85-56d404ef7106/600x900",
@@ -15516,7 +15521,7 @@
       "imdb": 6.7
     },
     "votes": {
-      "kp": 31399,
+      "kp": 31448,
       "imdb": 199
     },
     "poster": {
@@ -15549,7 +15554,7 @@
       "imdb": 7.8
     },
     "votes": {
-      "kp": 12905,
+      "kp": 12907,
       "imdb": 73305
     },
     "poster": {
@@ -15582,7 +15587,7 @@
       "imdb": 5.8
     },
     "votes": {
-      "kp": 18260,
+      "kp": 18368,
       "imdb": 220
     },
     "poster": {
